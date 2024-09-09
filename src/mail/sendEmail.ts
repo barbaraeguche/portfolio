@@ -4,7 +4,7 @@ import { Resend } from 'resend';
 import { ContactData } from '@/lib/types';
 import { validateFields } from '@/utils/validate-fields';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend('re_hsGhLJmh_Ez6T9rrbZkXnK7LrcxW3hrqg');
 
 const emailContent = (info: ContactData) => {
 	return `
