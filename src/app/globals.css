@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--mocha: #6F4E37;
+	--cream: #FEF8F2;
+}
+
+html {
+	background-color: var(--cream);
+}
+html.dark {
+	background-color: var(--mocha);
+}
