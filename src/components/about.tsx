@@ -1,6 +1,6 @@
 import SectionHeader from './section-header';
 import Image from 'next/image';
-import myPhoto from '../assets/me.jpeg';
+import myPhoto from '../../public/me.jpeg';
 
 export default function About() {
     return (
