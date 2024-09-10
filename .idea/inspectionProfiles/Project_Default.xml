@@ -6,7 +6,7 @@
         <language minSize="286" name="TypeScript" />
       </Languages>
     </inspection_tool>
-    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="HtmlRequiredTitleElement" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="IncorrectHttpHeaderInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="customHeaders">
         <set>
@@ -14,6 +14,7 @@
         </set>
       </option>
     </inspection_tool>
+    <inspection_tool class="JSXNamespaceValidation" enabled="false" level="INFORMATION" enabled_by_default="false" />
     <inspection_tool class="PyAttributeOutsideInitInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="PyChainedComparisonsInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="PyInterpreterInspection" enabled="false" level="WARNING" enabled_by_default="false" />

@@ -9,7 +9,9 @@
 
 html {
 	background-color: var(--cream);
+	--line-color: var(--mocha);
 }
 html.dark {
 	background-color: var(--mocha);
+	--line-color: var(--cream);
 }

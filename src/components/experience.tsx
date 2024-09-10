@@ -17,7 +17,7 @@ export default function Experience() {
         		 dark:text-cream transition"
 		>
             <SectionHeader>experience</SectionHeader>
-			<VerticalTimeline lineColor={getTextColor('var(--mocha)', 'var(--cream)')}>
+			<VerticalTimeline lineColor="">
 				{experiences.map(({ icon: Icon, title, date, location, description }, index) => (
 					<VerticalTimelineElement
 						key={index}
@@ -27,15 +27,16 @@ export default function Experience() {
 						dateClassName={`italic ${getTextColor('text-mocha', 'text-cream')}`}
 						contentStyle={{
 							background: '#F9EDE3',
-							border: `1px solid ${getTextColor('#C4A69F', '')}`,
+							border: `1px solid ${getTextColor('#C4A69F', '#C73B1BFF')}`,
 							boxShadow: '2px 2px 4px #E0D4CC',
 							borderRadius: '10px',
 							textAlign: 'justify',
 							padding: '0 20px 10px',
 						}}
 						contentArrowStyle={{
-							borderRight: `0.4rem solid ${getTextColor('#EECDA9FF', '')}`,
+							borderRight: `0.4rem solid ${getTextColor('#EECDA9FF', '#C73B1BFF')}`,
 						}}
+						visible={true}
 						className="hover:-rotate-3 transition will-change-transform"
 					>
 						<p className={`!text-[16px] !font-semibold ${getTextColor('text-mocha', 'text-cream')}`}>{title}</p>

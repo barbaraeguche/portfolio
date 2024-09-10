@@ -27,14 +27,16 @@ export default function Contact() {
                       
                       setIsMailing(true);
                       const { error } = await mailMe(contactInfo);
-                      setTimeout(() => setIsMailing(false), 5000);
-                      
-                      if(error) {
-                          toast.error(error);
-                          return;
-                      }
-                      toast.success('Mail successfully sent!');
-                      // setContactInfo({ email: '', message: '' });
+                      setTimeout(() => {
+                          setIsMailing(false);
+                          
+                          if(error) {
+                              toast.error(error);
+                              return;
+                          }
+                          toast.success('Mail successfully sent!');
+                          setContactInfo({ email: '', message: '' });
+                      }, 3000);
                   }
             }>
                 <div className="flex flex-col gap-y-1.5">

@@ -4,16 +4,16 @@ import { Resend } from 'resend';
 import { ContactData } from '@/lib/types';
 import { validateFields } from '@/utils/validate-fields';
 
-const resend = new Resend('re_hsGhLJmh_Ez6T9rrbZkXnK7LrcxW3hrqg');
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const emailContent = (info: ContactData) => {
 	return `
-		<div style="display: flex; flex-direction: column; row-gap: 15px; font-family: Judson, serif; font-size: 15px;">
-			<span>Hello Barbara,</span>
-			<span>${info.message.trim()}</span>
-			<span>Sent from: ${info.email.trim()}</span>
+		<article>
+			<h3>Hello Barbara,</h3>
+			<p>${info.message.trim()}</p>
+			<p>Sent from: ${info.email.trim()}</p>
 			<span>Have a lovely day.</span>
-		</div>
+		</article>
 	`;
 }
 const errorMsg = (error: unknown): string => {
