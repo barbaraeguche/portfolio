@@ -15,8 +15,8 @@ export default function Projects() {
             >
                 {projects.map(({ projIcon: Icon, gitUrl, title, description, tags }) => (
                     <div key={gitUrl} className="flex flex-col p-5 gap-y-5 rounded-[10px] border border-lm-border
-                                     bg-lm-card-bg drop-shadow-lm-card-shadow dark:bg-dm-card-bg dark:drop-shadow-dm-card-shadow
-                                     hover:animate-shake-card transition-transform will-change-transform motion-reduce:animate-none"
+                                      bg-lm-card-bg drop-shadow-lm-card-shadow dark:bg-dm-card-bg dark:drop-shadow-dm-card-shadow
+                                      hover:animate-shake-card transition-transform will-change-transform motion-reduce:animate-none"
                     >
                         <div className="flex justify-between">
                             <span>{<Icon/>}</span>
@@ -29,8 +29,8 @@ export default function Projects() {
                         <div className="flex flex-wrap gap-x-2 gap-y-1">
                             {tags.map((tag, index) => (
                                 <span key={index}
-                                      className="border border-lm-border italic px-2 rounded-full text-mocha-lighter bg-cream-lighter
-                                      dark:text-cream-lighter dark:bg-mocha-lighter"
+                                      className="border italic px-2 rounded-full bg-cream-lighter border-lm-border text-mocha-lighter
+                                      dark:bg-mocha-lighter dark:border-dm-border dark:text-cream-lighter"
                                 >
                                     {tag}
                                 </span>
