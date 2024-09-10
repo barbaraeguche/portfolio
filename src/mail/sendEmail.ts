@@ -1,4 +1,5 @@
 'use server';
+require('dotenv').config();
 
 import { Resend } from 'resend';
 import { ContactData } from '@/lib/types';
