@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 	description: 'My Portfolio'
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
     return (
-        <html lang="en">
+        <html lang="en" className="!scroll-smooth">
 	        <head>
 		        <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet"/>
 		        <link href="https://fonts.googleapis.com/css2?family=Judson" rel="stylesheet"/>

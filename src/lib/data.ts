@@ -37,28 +37,28 @@ export const projects: ProjectData[] = [
         projIcon: Trophy,
         gitUrl: 'https://github.com/barbaraeguche/youth-soccer-club',
         title: 'Youth Soccer Club',
-        description: '',
+        description: 'Collaborated on a youth soccer club management system to streamline administrative tasks and automate data handling for improved efficiency.',
         tags: ['html', 'css', 'php', 'sql', 'apis']
     },
     {
         projIcon: PawPrint,
         gitUrl: 'https://github.com/barbaraeguche/pet-adoption',
         title: 'Pet Adoption',
-        description: '',
+        description: 'Created a full-stack pet adoption web application with secure session management and user-friendly adoption functionalities.',
         tags: ['html', 'css', 'ejs', 'node.js', 'express.js', 'mongodb', 'auth', 'session', 'multer']
     },
     {
         projIcon: ShoppingBasket,
         gitUrl: 'https://github.com/barbaraeguche/grocery-list',
         title: 'Grocery Shopping',
-        description: '',
-        tags: ['react', 'flask', 'pymongo', 'apis', 'axios', 'flask-cors']
+        description: 'Developed a grocery shopping management application with CRUD functionalities, allowing users to efficiently manage their grocery lists',
+        tags: ['react', 'typescript', 'flask', 'pymongo', 'apis', 'axios', 'flask-cors']
     },
     {
         projIcon: Dices,
         gitUrl: 'https://github.com/barbaraeguche/snakes-and-ladders',
         title: 'Snakes and Ladders Game',
-        description: '',
+        description: 'Developed a two-player Snakes and Ladders game featuring interactive, turn-based gameplay with a console interface.',
         tags: ['java', 'intellij']
     }
 ];

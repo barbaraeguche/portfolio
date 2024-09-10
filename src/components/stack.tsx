@@ -5,8 +5,8 @@ import { currentStack } from '@/lib/data';
 export default function Stack() {
     return (
         <section id="stack"
-                 className="flex flex-col gap-y-10 mx-auto px-8 max-w-[50rem] mb-each-section text-mocha
-                 dark:text-cream transition"
+                 className="flex flex-col gap-y-10 mx-auto px-8 max-w-[50rem] mb-by-section text-mocha
+                 dark:text-cream transition scroll-mt-by-section"
         >
             <SectionHeader>my skills</SectionHeader>
             <article className="flex flex-wrap justify-center gap-2 will-change-transform">

@@ -17,8 +17,8 @@ export default function Contact() {
     
     return (
         <section id="contact"
-                 className="flex flex-col justify-center gap-y-10 mx-auto w-[85%] max-w-[450px] mb-each-section text-mocha
-        		 dark:text-cream transition"
+                 className="flex flex-col justify-center gap-y-10 mx-auto w-[85%] max-w-[450px] mb-by-section text-mocha
+        		 dark:text-cream transition scroll-mt-by-section"
         >
             <SectionHeader>contact me</SectionHeader>
             <form className="flex flex-col gap-y-10"

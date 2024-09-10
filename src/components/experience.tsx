@@ -13,8 +13,8 @@ export default function Experience() {
 
     return (
         <section id="experience"
-				 className="flex flex-col gap-y-10 px-8 mb-each-section text-mocha
-        		 dark:text-cream transition"
+				 className="flex flex-col gap-y-10 px-8 mb-by-section text-mocha
+        		 dark:text-cream transition scroll-mt-by-section"
 		>
             <SectionHeader>experience</SectionHeader>
 			<VerticalTimeline lineColor="">

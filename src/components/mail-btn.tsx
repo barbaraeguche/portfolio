@@ -8,7 +8,7 @@ export default function MailButton({ isSubmitting }: { isSubmitting: boolean }) 
 				className="group flex justify-center items-center border border-lm-border
                      py-1.5 px-3 tracking-[20%] rounded-[5px] mx-auto w-24 cursor-pointer bg-lm-card-bg
                      will-change-transform hover:scale-105 active:scale-90
-                     disabled:scale-100 disabled:cursor-wait disabled:drop-shadow-none
+                     disabled:scale-100 disabled:cursor-help disabled:drop-shadow-none
                      hover:drop-shadow-lm-card-shadow transition"
 		>
 			{isSubmitting ? (

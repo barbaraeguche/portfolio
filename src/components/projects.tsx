@@ -6,8 +6,8 @@ import { projects } from '@/lib/data';
 export default function Projects() {
     return (
         <section id="projects"
-                 className="flex flex-col gap-y-14 px-8 mb-each-section text-mocha
-        		 dark:text-cream transition"
+                 className="flex flex-col gap-y-14 px-8 mb-by-section text-mocha
+        		 dark:text-cream transition scroll-mt-by-section"
         >
             <SectionHeader>projects</SectionHeader>
             <div className="grid grid-cols-1 gap-6 mx-auto w-[85%] max-w-[450px]

@@ -7,7 +7,7 @@ import { validateFields } from '@/utils/validate-fields';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const emailContent = (info: ContactData) => {
+const emailTemplate = (info: ContactData) => {
 	return `
 		<article>
 			<h3>Hello Barbara,</h3>
@@ -35,7 +35,7 @@ export const mailMe = async (formData: ContactData) => {
 			to: 'barbaraeguche@icloud.com',
 			replyTo: formData.email,
 			subject: 'portfolio ~ contact',
-			html: emailContent(formData)
+			html: emailTemplate(formData)
 		});
 		return { error: errorMsg(error) };
 	} catch (error: unknown) {

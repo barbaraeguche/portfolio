@@ -11,7 +11,10 @@ const config: Config = {
                 'lg': '1440px'
             },
             margin: {
-                'each-section': '80px'
+                'by-section': '5rem'
+            },
+            scrollMargin: {
+                'by-section': '8rem'
             },
             fontFamily: {
                 'serif': ['Judson'],
@@ -58,7 +61,7 @@ const config: Config = {
                 }
             },
             animation: {
-                'rotate-icon': 'rotateIcon 1s linear infinite',
+                'rotate-icon': 'rotateIcon 2s linear infinite',
                 'shake-icon': 'shakeIcon 1s linear',
                 'shake-card': 'shakeCard 1s ease-in',
             }
