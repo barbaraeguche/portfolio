@@ -12,7 +12,7 @@ export default function Header() {
         
         const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
             entries.forEach(entry => entry.isIntersecting && setCurrentHash(`#${entry.target.id}`));
-        }, { root: null, rootMargin: '0px', threshold: 0.6 });
+        }, { root: null, rootMargin: '0px', threshold: 0.5 });
         
         // observe all the sections
         sectionsRef.current = navLinks.map(({ href }) => document.querySelector(href));
