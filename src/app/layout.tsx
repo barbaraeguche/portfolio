@@ -26,7 +26,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
 			        {children}
 			        <Toaster position='top-right'/>
 	                <Footer/>
-	                <SwitchTheme/>
+	                {/*<SwitchTheme/>*/}
                 </ThemeProvider>
             </body>
         </html>

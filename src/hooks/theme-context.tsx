@@ -10,13 +10,13 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
         setTheme((prevTheme) => prevTheme === 'light' ? 'dark' : 'light');
     }
     
-    useEffect(() => {
-        const preferredTheme: Theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-        setTheme(preferredTheme);
-    }, []);
-    useEffect(() => {
-        document.documentElement.classList.toggle('dark', theme === 'dark');
-    }, [theme]);
+    // useEffect(() => {
+    //     const preferredTheme: Theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    //     setTheme(preferredTheme);
+    // }, []);
+    // useEffect(() => {
+    //     document.documentElement.classList.toggle('dark', theme === 'dark');
+    // }, [theme]);
     
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
