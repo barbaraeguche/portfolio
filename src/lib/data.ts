@@ -65,5 +65,5 @@ export const projects: ProjectData[] = [
 export const socials: SocialData[] = [ //change
     { icon: FaLinkedin, socialUrl: 'https://linkedin.com/in/barbaraeguche/', name: 'linkedln' },
     { icon: FaGithub, socialUrl: 'https://github.com/barbaraeguche', name: 'github' },
-    { icon: FileDown, socialUrl: '', name: 'résumé' }
+    { icon: FileDown, socialUrl: '/cv.pdf', name: 'résumé' }
 ];

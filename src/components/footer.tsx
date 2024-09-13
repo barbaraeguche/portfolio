@@ -11,7 +11,7 @@ export default function Footer() {
             </p>
             <span className="inline-flex space-x-3">
                 {socials.map(({icon: Icon, socialUrl, name}) => (
-                    <a key={socialUrl} href={socialUrl} target="_" title={name} className="text-2xl" download>
+                    <a key={socialUrl} href={socialUrl} target="_" title={name} className="text-2xl" download={name === 'résumé'}>
                         {<Icon/>}
                     </a>
                 ))}
