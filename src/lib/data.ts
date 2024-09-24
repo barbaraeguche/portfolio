@@ -43,14 +43,14 @@ export const projects: ProjectData[] = [
     {
         projIcon: PawPrint,
         gitUrl: 'https://github.com/barbaraeguche/pet-adoption',
-        title: 'Pet Adoption',
+            title: 'Whisker Cove',
         description: 'Created a full-stack pet adoption web application with secure session management and user-friendly adoption functionalities.',
         tags: ['html', 'css', 'ejs', 'node.js', 'express.js', 'mongodb', 'auth', 'session', 'multer']
     },
     {
         projIcon: ShoppingBasket,
         gitUrl: 'https://github.com/barbaraeguche/grocery-list',
-        title: 'Grocery Shopping',
+        title: 'SnapCart',
         description: 'Developed a grocery shopping management application with CRUD functionalities, allowing users to efficiently manage their grocery lists',
         tags: ['react', 'typescript', 'flask', 'pymongo', 'apis', 'axios', 'flask-cors']
     },
