@@ -46,7 +46,7 @@ export default function Contact() {
                            maxLength={50} required
                     />
                     <textarea name="message" value={contactInfo.message} onChange={handleChange}
-                              placeholder="your message body..."
+                              placeholder="your message..."
                               className="bg-lm-input-bg border border-lm-border pl-4 py-2 rounded-[5px] placeholder-lm-border resize-none"
                               rows={5} minLength={10} maxLength={200} required
                     ></textarea>
