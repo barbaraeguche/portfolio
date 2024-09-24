@@ -41,7 +41,7 @@ export default function Contact() {
             }>
                 <div className="flex flex-col gap-y-1.5">
                     <input type="email" name="email" value={contactInfo.email} onChange={handleChange}
-                           placeholder="your email address..."
+                           placeholder="your email..."
                            className="bg-lm-input-bg border border-lm-border pl-4 py-2 rounded-[5px] placeholder-lm-border"
                            maxLength={50} required
                     />
