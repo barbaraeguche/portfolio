@@ -1,0 +1,14 @@
+.idea
+
+# node modules
+node_modules/
+
+# build output
+/dist
+/build
+
+# logs
+*.log
+
+# personal
+manifesting.json
