@@ -21,3 +21,8 @@ export interface Socials {
   name: string;
   url: string;
 }
+
+export type Routes = {
+  name: string;
+  url: string;
+};
