@@ -1,0 +1,24 @@
+import Footer from "@/components/footer";
+import Header from "@/components/header";
+import { type ReactNode } from "react";
+
+export default function Layout({ children }: { children: ReactNode }) {
+  return (
+    // page root — sets palette base colors and font for all pages
+    <div className="min-h-screen relative overflow-x-hidden bg-rose-bg text-rose-ink font-body">
+      
+      {/* paper grain overlay */}
+      <div aria-hidden="true" className="fixed inset-0 pointer-events-none z-1 bg-noise opacity-55 mix-blend-multiply"/>
+      
+      {/* soft vignette */}
+      <div aria-hidden="true" className="fixed inset-0 pointer-events-none z-1 bg-vignette"/>
+      
+      {/* page content */}
+      <div className="relative z-2 max-w-300 mx-auto px-6 md:px-14 pt-9 pb-20">
+        <Header/>
+        {children}
+        <Footer/>
+      </div>
+    </div>
+  );
+}
