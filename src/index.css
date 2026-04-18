@@ -1,1 +1,71 @@
 @import "tailwindcss";
+
+@theme {
+  /* cocoa */
+  --color-cocoa-bg: #f5ecd9;
+  --color-cocoa-bg2: #efe3c7;
+  --color-cocoa-ink: #4a2410;
+  --color-cocoa-ink-soft: #7a4a2e;
+  --color-cocoa-ink-faint: #b59a78;
+  --color-cocoa-paper-line: #d9c69d;
+  --color-cocoa-rose: #c45a6b;
+  --color-cocoa-sage: #6b8e6f;
+  --color-cocoa-sky: #6b8eb3;
+  --color-cocoa-gold: #c89b3c;
+  --color-cocoa-cloud: #fffaf0;
+  --color-cocoa-cloud-edge: #efe3c7;
+
+  /* cream */
+  --color-cream-bg: #faf3e3;
+  --color-cream-bg2: #f3e9d0;
+  --color-cream-ink: #5a341a;
+  --color-cream-ink-soft: #8a5a3a;
+  --color-cream-ink-faint: #c4a886;
+  --color-cream-paper-line: #e2d2a8;
+  --color-cream-rose: #d06b7c;
+  --color-cream-sage: #7ba07f;
+  --color-cream-sky: #7ba0c4;
+  --color-cream-gold: #d4a747;
+  --color-cream-cloud: #fffdf6;
+  --color-cream-cloud-edge: #f3e9d0;
+
+  /* rose */
+  --color-rose-bg: #f7e9df;
+  --color-rose-bg2: #f0dfd0;
+  --color-rose-ink: #5a2a26;
+  --color-rose-ink-soft: #884443;
+  --color-rose-ink-faint: #c89c95;
+  --color-rose-paper-line: #e0c3b6;
+  --color-rose-accent: #c8556e;
+  --color-rose-sage: #8aa07a;
+  --color-rose-sky: #7a92b4;
+  --color-rose-gold: #c89240;
+  --color-rose-cloud: #fff8f3;
+  --color-rose-cloud-edge: #f0dfd0;
+
+  /* forest */
+  --color-forest-bg: #efe9d8;
+  --color-forest-bg2: #e3dcc4;
+  --color-forest-ink: #2e3924;
+  --color-forest-ink-soft: #4f5d3e;
+  --color-forest-ink-faint: #9aa385;
+  --color-forest-paper-line: #c9c8a5;
+  --color-forest-rose: #c45a6b;
+  --color-forest-sage: #5e7a5a;
+  --color-forest-sky: #6b8eb3;
+  --color-forest-gold: #b88a32;
+  --color-forest-cloud: #fbf8ec;
+  --color-forest-cloud-edge: #e3dcc4;
+
+  /* fonts */
+  --font-display: "Newsreader", Georgia, serif;
+  --font-display-alt: "Fraunces", Georgia, serif;
+  --font-display-serif: "Instrument Serif", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-mono-alt: "DM Mono", ui-monospace, monospace;
+}
+
+html, body, #root {
+  min-height: 100vh;
+}

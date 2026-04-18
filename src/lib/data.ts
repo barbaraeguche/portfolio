@@ -6,8 +6,8 @@ export const experience: Experience[] = [
     url: "",
     roles: [{
       title: "",
-      duration: "",
-      description: "",
+      team: "",
+      period: "",
       is_internship: true,
       is_current: true,
     }],
@@ -17,8 +17,8 @@ export const experience: Experience[] = [
     url: "https://www.autodesk.com/company",
     roles: [{
       title: "Software Engineer",
-      duration: "Jan 2026 - Aug 2026",
-      description: "ems | rdo trust",
+      team: "ems | rdo trust",
+      period: "Jan 2026 - Aug 2026",
       is_internship: true,
       is_current: false,
     }],
@@ -28,8 +28,8 @@ export const experience: Experience[] = [
     url: "https://www.radio-ip.com/en/solutions/mult-ip/",
     roles: [{
       title: "Software Engineer",
-      duration: "Jan 2025 - Aug 2025",
-      description: "nextgen | multip x command center",
+      team: "nextgen | multip x command center",
+      period: "Jan 2025 - Aug 2025",
       is_internship: true,
       is_current: false,
     }],
