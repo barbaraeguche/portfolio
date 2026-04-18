@@ -106,7 +106,7 @@ function Squiggle({ className = "" }: SvgProps) {
 
 export default function Decorations() {
   return (
-    <div aria-hidden="true" className="fixed inset-0 pointer-events-none z-0">
+    <div aria-hidden="true" className="fixed inset-0 pointer-events-none z-2">
       <div className="fixed top-27.5 left-[6%] -rotate-12">
         <Heart size={34} />
       </div>
