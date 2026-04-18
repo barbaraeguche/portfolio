@@ -47,8 +47,8 @@ export const projects: Project[] = [
 
 export const socials: Socials[] = [
   {
-    name: "mail",
-    "url": "malito:barbareguche@gmail.com",
+    name: "email",
+    "url": "mailto:barbareguche@gmail.com",
   },
   {
     name: "linkedin",
