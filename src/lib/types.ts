@@ -3,8 +3,8 @@ export interface Experience {
   url: string;
   roles: {
     title: string;
-    duration: string;
-    description: string;
+    team: string;
+    period: string;
     is_internship: boolean;
     is_current: boolean;
   }[];
