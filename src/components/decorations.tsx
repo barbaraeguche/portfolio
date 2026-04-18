@@ -63,13 +63,13 @@ function IceSkate({ className = "" }: SvgProps) {
         strokeWidth="1.5"
         strokeLinejoin="round"
       />
-      <path d="M22 12 L36 14 M22 18 L36 20 M22 24 L36 26" stroke="#fffaf0" strokeWidth="1.2" strokeLinecap="round" />
-      <circle cx="28" cy="14" r="1.2" fill="#fffaf0" />
-      <circle cx="28" cy="20" r="1.2" fill="#fffaf0" />
-      <circle cx="28" cy="26" r="1.2" fill="#fffaf0" />
-      <path d="M6 38 L52 38 L48 44 L10 44 Z" fill="#d4d4dc" stroke="#4a2410" strokeWidth="1.2" />
-      <path d="M4 46 L54 46" stroke="#4a2410" strokeWidth="1.5" strokeLinecap="round" />
-      <circle cx="42" cy="11" r="4" fill="#c45a6b" stroke="#4a2410" strokeWidth="1" />
+      <path d="M22 12 L36 14 M22 18 L36 20 M22 24 L36 26" stroke="#fffaf0" strokeWidth="1.2" strokeLinecap="round"/>
+      <circle cx="28" cy="14" r="1.2" fill="#fffaf0"/>
+      <circle cx="28" cy="20" r="1.2" fill="#fffaf0"/>
+      <circle cx="28" cy="26" r="1.2" fill="#fffaf0"/>
+      <path d="M6 38 L52 38 L48 44 L10 44 Z" fill="#d4d4dc" stroke="#4a2410" strokeWidth="1.2"/>
+      <path d="M4 46 L54 46" stroke="#4a2410" strokeWidth="1.5" strokeLinecap="round"/>
+      <circle cx="42" cy="11" r="4" fill="#c45a6b" stroke="#4a2410" strokeWidth="1"/>
     </svg>
   );
 }
@@ -107,23 +107,26 @@ function Squiggle({ className = "" }: SvgProps) {
 export default function Decorations() {
   return (
     <div aria-hidden="true" className="fixed inset-0 pointer-events-none z-2">
-      <div className="fixed top-27.5 left-[6%] -rotate-12">
-        <Heart size={34} />
-      </div>
-      <div className="fixed bottom-[18%] right-[4%] rotate-18">
-        <Heart size={26} fill="#d8a4ad" />
-      </div>
-      <div className="fixed top-[35%] left-[2%] -rotate-[8deg]">
-        <Ribbon />
-      </div>
-      <div className="fixed bottom-[8%] left-[38%] -rotate-6 hidden md:block">
-        <IceSkate />
-      </div>
-      <div className="fixed top-[18%] right-[18%] hidden md:block">
-        <Star />
-      </div>
-      <div className="fixed top-[58%] right-[1%] hidden md:block opacity-50">
-        <Squiggle />
+      {/* constrained to content width so decorations stay near the sections */}
+      <div className="relative h-full max-w-300 mx-auto px-6 md:px-14">
+        <div className="absolute top-27.5 -left-[26%] -rotate-12">
+          <Heart size={34}/>
+        </div>
+        <div className="absolute bottom-[18%] -right-[24%] rotate-18">
+          <Heart size={26} fill="#d8a4ad"/>
+        </div>
+        <div className="absolute top-[35%] -left-[22%] -rotate-[8deg]">
+          <Ribbon/>
+        </div>
+        <div className="absolute bottom-[3%] left-[38%] -rotate-6 hidden md:block">
+          <IceSkate/>
+        </div>
+        <div className="absolute top-[18%] -right-[2%] hidden md:block">
+          <Star/>
+        </div>
+        <div className="absolute top-[58%] -right-[21%] hidden md:block opacity-50">
+          <Squiggle/>
+        </div>
       </div>
     </div>
   );

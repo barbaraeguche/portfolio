@@ -19,9 +19,9 @@ export default function CursorTrail({ colors }: { colors: string[] }) {
     cursor.textContent = "\u2660";
     document.body.appendChild(cursor);
 
-    // swap to clover on links, rotate spade -45deg
+    // swap to clover on links or buttons, rotate spade -45deg
     const onOver = (e: MouseEvent) => {
-      const isLink = (e.target as Element).closest("a") !== null;
+      const isLink = (e.target as Element).closest("a, button") !== null;
       cursor.textContent = isLink ? "\u2663" : "\u2660";
       cursor.style.color = isLink ? "var(--color-cream-sage)" : "var(--color-cream-sky)";
       cursor.style.transform = isLink ? "translate(-50%, -50%)" : "translate(-50%, -50%) rotate(-45deg)";
