@@ -1,6 +1,6 @@
 type SvgProps = { className?: string };
 
-export function Heart({ size = 34, fill = "#c45a6b", className = "" }: {
+function Heart({ size = 34, fill = "#c45a6b", className = "" }: {
   size?: number,
   fill?: string
 } & SvgProps) {
@@ -31,7 +31,7 @@ export function Heart({ size = 34, fill = "#c45a6b", className = "" }: {
   );
 }
 
-export function Ribbon({ className = "" }: SvgProps) {
+function Ribbon({ className = "" }: SvgProps) {
   return (
     <svg className={className} width="60" height="120" viewBox="0 0 60 120" fill="none" aria-hidden="true">
       <path
@@ -53,7 +53,7 @@ export function Ribbon({ className = "" }: SvgProps) {
   );
 }
 
-export function IceSkate({ className = "" }: SvgProps) {
+function IceSkate({ className = "" }: SvgProps) {
   return (
     <svg className={className} width="64" height="56" viewBox="0 0 64 56" fill="none" aria-hidden="true">
       <path
@@ -74,7 +74,7 @@ export function IceSkate({ className = "" }: SvgProps) {
   );
 }
 
-export function Star({ className = "", size = 22, }: {
+function Star({ className = "", size = 22, }: {
   size?: number
 } & SvgProps) {
   return (
@@ -90,7 +90,7 @@ export function Star({ className = "", size = 22, }: {
   );
 }
 
-export function Squiggle({ className = "" }: SvgProps) {
+function Squiggle({ className = "" }: SvgProps) {
   return (
     <svg className={className} width="80" height="40" viewBox="0 0 80 40" fill="none" aria-hidden="true">
       <path
@@ -101,5 +101,30 @@ export function Squiggle({ className = "" }: SvgProps) {
         fill="none"
       />
     </svg>
+  );
+}
+
+export default function Decorations() {
+  return (
+    <div aria-hidden="true" className="fixed inset-0 pointer-events-none z-0">
+      <div className="fixed top-27.5 left-[6%] -rotate-12">
+        <Heart size={34} />
+      </div>
+      <div className="fixed bottom-[18%] right-[4%] rotate-18">
+        <Heart size={26} fill="#d8a4ad" />
+      </div>
+      <div className="fixed top-[35%] left-[2%] -rotate-[8deg]">
+        <Ribbon />
+      </div>
+      <div className="fixed bottom-[8%] left-[38%] -rotate-6 hidden md:block">
+        <IceSkate />
+      </div>
+      <div className="fixed top-[18%] right-[18%] hidden md:block">
+        <Star />
+      </div>
+      <div className="fixed top-[58%] right-[1%] hidden md:block opacity-50">
+        <Squiggle />
+      </div>
+    </div>
   );
 }
