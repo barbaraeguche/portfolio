@@ -150,9 +150,9 @@ function buildVinePath(cx: number, h: number): string {
   
   while (y > 0) {
     const nextY = Math.max(0, y - halfPeriod);
-    d += `C ${cx + side * cp} ${y - halfPeriod * 0.25}`;
-    d += `${cx + side * cp} ${nextY + halfPeriod * 0.25}`;
-    d += `${cx} ${nextY}`;
+    d += ` C ${cx + side * cp} ${y - halfPeriod * 0.25}`;
+    d += ` ${cx + side * cp} ${nextY + halfPeriod * 0.25}`;
+    d += ` ${cx} ${nextY}`;
     y = nextY;
     side *= -1;
   }
