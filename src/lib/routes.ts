@@ -3,14 +3,14 @@ import type { Routes } from "@/lib/types";
 export const routes: Routes[] = [
   {
     name: "about",
-    url: "/#",
+    url: "#about",
   },
   {
     name: "experience",
-    url: "/#",
+    url: "#experience",
   },
   {
     name: "projects",
-    url: "/#",
+    url: "#projects",
   },
 ];
