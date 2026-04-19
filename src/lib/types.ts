@@ -1,4 +1,4 @@
-export interface Experience {
+export interface IExperience {
   company: string;
   url: string;
   roles: {
@@ -10,14 +10,14 @@ export interface Experience {
   }[];
 }
 
-export interface Project {
+export interface IProject {
   name: string;
   url: string;
   description: string;
   stack: string[];
 }
 
-export interface Socials {
+export interface ISocial {
   name: string;
   url: string;
 }

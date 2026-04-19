@@ -29,7 +29,7 @@ export default function About() {
 
         <div className="mt-9 max-w-[52ch] text-[16.5px] text-rose-ink leading-[1.7] text-justify">
           <span className="inline-block mb-3 font-mono text-[10px] tracking-[0.14em] uppercase text-rose-ink-faint bg-rose-bg2 py-0.75 px-2 rounded-[3px]">
-            a little about me
+            a little more on me
           </span>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
