@@ -109,13 +109,13 @@ export default function Decorations() {
     <div aria-hidden="true" className="fixed inset-0 pointer-events-none z-2">
       {/* constrained to content width so decorations stay near the sections */}
       <div className="relative h-full max-w-300 mx-auto px-6 md:px-14">
-        <div className="absolute top-27.5 -left-[26%] -rotate-12">
+        <div className="absolute top-27.5 left-0 xl:-left-[2%] 2xl:-left-[10%] -rotate-12">
           <Heart size={34}/>
         </div>
-        <div className="absolute bottom-[18%] -right-[24%] rotate-18">
+        <div className="absolute bottom-[18%] right-0 xl:-right-[2%] 2xl:-right-[9%] rotate-18">
           <Heart size={26} fill="#d8a4ad"/>
         </div>
-        <div className="absolute top-[35%] -left-[22%] -rotate-[8deg]">
+        <div className="absolute top-[35%] left-0 xl:-left-[2%] 2xl:-left-[9%] -rotate-[8deg]">
           <Ribbon/>
         </div>
         <div className="absolute bottom-[3%] left-[38%] -rotate-6 hidden md:block">
@@ -124,7 +124,7 @@ export default function Decorations() {
         <div className="absolute top-[18%] -right-[2%] hidden md:block">
           <Star/>
         </div>
-        <div className="absolute top-[58%] -right-[21%] hidden md:block opacity-50">
+        <div className="absolute top-[58%] right-0 xl:-right-[2%] 2xl:-right-[9%] hidden md:block opacity-50">
           <Squiggle/>
         </div>
       </div>
