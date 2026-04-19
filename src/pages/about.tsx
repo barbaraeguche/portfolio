@@ -1,3 +1,4 @@
+import SectionHeader from "@/components/sectionHeader";
 import ThoughtBubble from "@/components/thoughtBubble";
 import { socials } from "@/lib/data";
 import { type ReactNode } from "react";
@@ -9,10 +10,7 @@ export default function About() {
   return (
     <section className="grid md:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] gap-14 pt-18 items-start">
       <div>
-        <span className="inline-flex items-center gap-2.5 mb-4.5 font-mono text-[11px] tracking-[0.18em] uppercase text-rose-ink-soft">
-          <span className="w-7 h-px bg-rose-ink-soft inline-block"/>
-          file 01 · about
-        </span>
+        <SectionHeader title="file 01 · about"/>
 
         <h1 className="font-display-alt font-medium text-[clamp(60px,9vw,120px)] leading-[0.92] tracking-[-0.025em] text-rose-ink mb-1.5">
           <span className="block">Barbara</span>
