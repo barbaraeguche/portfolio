@@ -1,3 +1,4 @@
+import Closing from "@/components/closing";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { type ReactNode } from "react";
@@ -21,8 +22,9 @@ export default function Layout({ children }: { children: ReactNode }) {
       </div>
 
       {/* page content */}
-      <div className="relative z-2 max-w-300 mx-auto px-6 md:px-14 pt-[76px] pb-20">
+      <div className="relative z-2 max-w-300 mx-auto px-6 md:px-14 pt-19 pb-20">
         {children}
+        <Closing/>
         <Footer/>
       </div>
     </div>
