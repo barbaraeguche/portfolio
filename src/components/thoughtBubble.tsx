@@ -81,23 +81,29 @@ export default function ThoughtBubble() {
             </radialGradient>
           </defs>
           
-          {/* soft depth rim — blurred dark underlay gives the edge subtle definition */}
-          <path d={cloudPath} fill="var(--color-rose-ink)" opacity="0.07" filter="url(#rim-blur)"/>
-          <circle cx="78" cy="355" r="19" fill="var(--color-rose-ink)" opacity="0.07" filter="url(#rim-blur)"/>
-          <circle cx="57" cy="398" r="12" fill="var(--color-rose-ink)" opacity="0.07" filter="url(#rim-blur)"/>
-          <circle cx="42" cy="430" r="7" fill="var(--color-rose-ink)" opacity="0.07" filter="url(#rim-blur)"/>
-          
-          {/* cloud body — fill shown through soft-edged mask */}
-          <rect x="30" y="5" width="500" height="440" fill="url(#cloudBody)" mask="url(#cloud-mask)"/>
-          <rect x="30" y="5" width="500" height="440" fill="url(#cloudHighlight)" mask="url(#cloud-mask)"/>
-          
-          {/* thought trail — three shrinking bubbles leading to the thinker */}
-          <circle cx="78" cy="355" r="19" fill="var(--color-rose-cloud)" mask="url(#bubble-1)"/>
-          <circle cx="57" cy="398" r="12" fill="var(--color-rose-cloud)" mask="url(#bubble-2)"/>
-          <circle cx="42" cy="430" r="7" fill="var(--color-rose-cloud)" mask="url(#bubble-3)"/>
+          {/* thought trail — bubbles appear first, bottom-up */}
+          <g className="animate-bubble-in">
+            <circle cx="42" cy="430" r="7" fill="var(--color-rose-ink)" opacity="0.07" filter="url(#rim-blur)"/>
+            <circle cx="42" cy="430" r="7" fill="var(--color-rose-cloud)" mask="url(#bubble-3)"/>
+          </g>
+          <g className="animate-bubble-in [animation-delay:0.18s]">
+            <circle cx="57" cy="398" r="12" fill="var(--color-rose-ink)" opacity="0.07" filter="url(#rim-blur)"/>
+            <circle cx="57" cy="398" r="12" fill="var(--color-rose-cloud)" mask="url(#bubble-2)"/>
+          </g>
+          <g className="animate-bubble-in [animation-delay:0.36s]">
+            <circle cx="78" cy="355" r="19" fill="var(--color-rose-ink)" opacity="0.07" filter="url(#rim-blur)"/>
+            <circle cx="78" cy="355" r="19" fill="var(--color-rose-cloud)" mask="url(#bubble-1)"/>
+          </g>
+
+          {/* main cloud body — appears after the trail */}
+          <g className="animate-cloud-in [animation-delay:0.56s]">
+            <path d={cloudPath} fill="var(--color-rose-ink)" opacity="0.07" filter="url(#rim-blur)"/>
+            <rect x="30" y="5" width="500" height="440" fill="url(#cloudBody)" mask="url(#cloud-mask)"/>
+            <rect x="30" y="5" width="500" height="440" fill="url(#cloudHighlight)" mask="url(#cloud-mask)"/>
+          </g>
         </svg>
         
-        <div className="absolute inset-[7%_14%_30%_14%] flex items-center justify-center">
+        <div className="absolute inset-[7%_14%_30%_14%] flex items-center justify-center animate-fade-up [animation-delay:1.1s]">
           {scenes.map((s, i) => (
             <div
               key={i}
@@ -112,11 +118,11 @@ export default function ThoughtBubble() {
         </div>
       </div>
       
-      <div className="text-center font-mono text-[11px] tracking-[0.18em] uppercase text-rose-ink-soft">
+      <div className="text-center font-mono text-[11px] tracking-[0.18em] uppercase text-rose-ink-soft animate-fade-up [animation-delay:1.2s]">
         — {scenes[idx]?.label} —
       </div>
-      
-      <div className="flex gap-1.5 justify-center mt-7">
+
+      <div className="flex gap-1.5 justify-center mt-7 animate-fade-up [animation-delay:1.3s]">
         {scenes.map((_, i) => (
           <button
             key={i}
