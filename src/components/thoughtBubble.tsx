@@ -1,7 +1,7 @@
 import ASCII_SCENES from "@/lib/asciiScenes";
 import { useEffect, useState } from "react";
 
-const ROTATE_SECONDS = 7;
+const ROTATE_SECONDS = 9;
 
 // cloud outline path — bumpy top, smooth rounded bottom
 const cloudPath =
