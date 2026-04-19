@@ -8,7 +8,7 @@ export default function About() {
   const elsewhere = socials.slice(1);
 
   return (
-    <section id="about" className="grid md:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] gap-14 pt-18 items-start">
+    <section id="about" className="grid md:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] gap-14 pt-18 items-start scroll-mt-20">
       <div>
         <SectionHeader title="file 01 · about"/>
 
