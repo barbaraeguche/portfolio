@@ -1,10 +1,21 @@
 import { routes } from "@/lib/routes";
-import { motion } from "motion/react";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import React, { useState } from "react";
 
 export default function Header() {
   const [active, setActive] = useState(routes[0].name);
-  
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (y) => {
+    for (const route of [...routes].reverse()) {
+      const el = document.querySelector(route.url) as HTMLElement | null;
+      if (el && y >= el.offsetTop - 190) {
+        setActive(route.name);
+        break;
+      }
+    }
+  });
+
   const handleClick = (e: React.MouseEvent, name: string, url: string) => {
     e.preventDefault();
     setActive(name);
