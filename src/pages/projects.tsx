@@ -1,21 +1,46 @@
 import SectionHeader from "@/components/sectionHeader";
 import { projects } from "@/lib/data";
 import type { IProject } from "@/lib/types";
+import { motion, type Variants } from "motion/react";
+
+const container: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.1 } }
+};
+
+const card: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } }
+};
 
 export default function Projects() {
   return (
     <section id="projects" className="mt-32 pt-5.5 border-t border-dashed border-rose-paper-line scroll-mt-35">
       <SectionHeader title="file 03 · projects"/>
 
-      <h2 className="font-display-alt font-medium text-[clamp(36px,5vw,63px)] leading-[0.96] tracking-[-0.02em] text-rose-ink mb-8">
+      <motion.h2
+        className="font-display-alt font-medium text-[clamp(36px,5vw,63px)] leading-[0.96] tracking-[-0.02em] text-rose-ink mb-8"
+        initial={{ opacity: 0, y: 14 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      >
         Things I've Built
-      </h2>
+      </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-60px" }}
+      >
         {projects.map((project, i) => (
-          <ProjectCard key={i} project={project}/>
+          <motion.div key={i} variants={card}>
+            <ProjectCard project={project}/>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

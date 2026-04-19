@@ -13,13 +13,13 @@ export default function About() {
         <SectionHeader title="file 01 · about"/>
 
         <h1 className="font-display-alt font-medium text-[clamp(60px,9vw,120px)] leading-[0.92] tracking-[-0.025em] text-rose-ink mb-1.5">
-          <span className="block">Barbara</span>
-          <span className="block italic pl-[0.6em] md:pl-[1.4em] text-rose-ink-soft">
+          <span className="block animate-name-in [animation-delay:0.2s]">Barbara</span>
+          <span className="block italic pl-[0.6em] md:pl-[1.4em] text-rose-ink-soft animate-name-in [animation-delay:0.42s]">
             Egu<em className="not-italic text-rose-accent font-display-alt">che</em>
           </span>
         </h1>
 
-        <div className="mt-4.5 flex flex-wrap gap-y-2 gap-x-3.5 items-center font-mono text-[13px] text-rose-ink-soft">
+        <div className="mt-4.5 flex flex-wrap gap-y-2 gap-x-3.5 items-center font-mono text-[13px] text-rose-ink-soft animate-fade-up [animation-delay:0.28s]">
           <span>cs student</span>
           <span className="w-1.25 h-1.25 rounded-full bg-rose-sage inline-block"/>
           <span>builds soft, sturdy software</span>
@@ -28,22 +28,22 @@ export default function About() {
         </div>
 
         <div className="mt-9 max-w-[52ch] text-[16.5px] text-rose-ink leading-[1.7] text-justify">
-          <span className="inline-block mb-3 font-mono text-[10px] tracking-[0.14em] uppercase text-rose-ink-faint bg-rose-bg2 py-0.75 px-2 rounded-[3px]">
+          <span className="inline-block mb-3 font-mono text-[10px] tracking-[0.14em] uppercase text-rose-ink-faint bg-rose-bg2 py-0.75 px-2 rounded-[3px] animate-fade-up [animation-delay:0.42s]">
             a little more on me
           </span>
-          <p>
+          <p className="animate-fade-up [animation-delay:0.54s]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat.
           </p>
-          <p className="mt-4">
+          <p className="mt-4 animate-fade-up [animation-delay:0.66s]">
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
             laborum.
           </p>
         </div>
 
-        <dl className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-y-4.5 gap-x-8 max-w-120">
+        <dl className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-y-4.5 gap-x-8 max-w-120 animate-fade-up [animation-delay:0.82s]">
           <DlRow label="based in">toronto, ca</DlRow>
           <DlRow label="studying">computer science</DlRow>
 

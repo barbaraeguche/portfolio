@@ -1,6 +1,17 @@
 import SectionHeader from "@/components/sectionHeader";
 import { experience } from "@/lib/data";
 import type { IExperience } from "@/lib/types";
+import { motion, type Variants } from "motion/react";
+
+const container: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.18 } }
+};
+
+const item: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } }
+};
 
 const ROLE_H = 90; // px — must match min-h-22.5 on role rows
 
@@ -9,9 +20,15 @@ export default function Experience() {
     <section id="experience" className="mt-32 pt-5.5 border-t border-dashed border-rose-paper-line scroll-mt-35">
       <SectionHeader title="file 02 · experience"/>
 
-      <div className="space-y-12">
+      <motion.div
+        className="space-y-12"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-80px" }}
+      >
         {experience.map((exp, expIdx) => (
-          <div key={expIdx} className="grid md:grid-cols-[240px_1fr] gap-6 md:gap-10">
+          <motion.div key={expIdx} variants={item} className="grid md:grid-cols-[240px_1fr] gap-6 md:gap-10">
             <div>
               <a
                 href={exp.url}
@@ -51,9 +68,9 @@ export default function Experience() {
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
