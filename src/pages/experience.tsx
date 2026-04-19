@@ -33,6 +33,7 @@ export default function Experience() {
               <a
                 href={exp.url}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="font-display italic font-medium text-[22px] text-rose-ink no-underline border-b border-rose-ink-faint inline-block"
               >
                 {exp.company}

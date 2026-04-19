@@ -21,9 +21,9 @@ export default function About() {
 
         <div className="mt-4.5 flex flex-wrap gap-y-2 gap-x-3.5 items-center font-mono text-[13px] text-rose-ink-soft animate-fade-up [animation-delay:0.28s]">
           <span>cs student</span>
-          <span className="w-1.25 h-1.25 rounded-full bg-rose-sage inline-block"/>
+          <span aria-hidden="true" className="w-1.25 h-1.25 rounded-full bg-rose-sage inline-block"/>
           <span>builds soft, sturdy software</span>
-          <span className="w-1.25 h-1.25 rounded-full bg-rose-accent inline-block"/>
+          <span aria-hidden="true" className="w-1.25 h-1.25 rounded-full bg-rose-accent inline-block"/>
           <span>likes ice skating</span>
         </div>
 
@@ -51,6 +51,7 @@ export default function About() {
             <a
               href={email.url}
               target="_blank"
+              rel="noopener noreferrer"
               className="text-rose-ink no-underline border-b border-rose-ink-faint pb-px"
             >
               {email.url.replace("mailto:", "")}
@@ -63,6 +64,7 @@ export default function About() {
                 <a
                   href={s.url}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="text-rose-ink no-underline border-b border-rose-ink-faint"
                 >
                   {s.name}

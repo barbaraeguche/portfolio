@@ -128,7 +128,7 @@ export default function ThoughtBubble() {
             key={i}
             onClick={() => setIdx(i)}
             aria-label={"scene " + (i + 1)}
-            className={`w-5.5 h-1 rounded-xs border-none p-0 transition-[opacity,background] duration-300 ${i === idx ? "bg-rose-accent opacity-100" : "bg-rose-ink-faint opacity-40"}`}
+            className={`w-5.5 h-1 rounded-xs border-none p-0 transition-[opacity,background] duration-300 focus-visible:outline-2 focus-visible:outline-rose-accent focus-visible:outline-offset-3 ${i === idx ? "bg-rose-accent opacity-100" : "bg-rose-ink-faint opacity-40"}`}
           />
         ))}
       </div>
