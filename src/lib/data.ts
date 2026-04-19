@@ -6,7 +6,7 @@ export const experience: IExperience[] = [
     url: "https://www.autodesk.com/company",
     roles: [{
       title: "Software Engineer",
-      team: "ems | rdo trust",
+      team: "rdo trust | code coverage analysis on 3ds max & maya",
       period: "Jan 2026 - Apr 2026",
       is_internship: true,
       is_current: true,
@@ -17,7 +17,7 @@ export const experience: IExperience[] = [
     url: "https://www.radio-ip.com/en/solutions/mult-ip/",
     roles: [{
       title: "Software Engineer",
-      team: "nextgen | multip x command center",
+      team: "mult-ip | building interfaces for mobile vpn software",
       period: "Jan 2025 - Aug 2025",
       is_internship: true,
       is_current: false,
