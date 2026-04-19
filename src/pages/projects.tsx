@@ -47,7 +47,7 @@ export default function Projects() {
 
 function ProjectCard({ project }: { project: IProject }) {
   return (
-    <article className="project-card relative p-6 rounded-xl bg-rose-cloud border-[1.5px] border-rose-paper-line shadow-[0_8px_20px_rgba(74,36,16,0.1),0_2px_4px_rgba(74,36,16,0.06)]">
+    <article className="h-full project-card relative p-6 rounded-xl bg-rose-cloud border-[1.5px] border-rose-paper-line shadow-[0_8px_20px_rgba(74,36,16,0.1),0_2px_4px_rgba(74,36,16,0.06)]">
       <div className="flex items-start justify-between mb-3">
         <h3 className="font-display-alt font-medium text-[22px] text-rose-ink tracking-[-0.01em] leading-[1.1]">
           {project.name}

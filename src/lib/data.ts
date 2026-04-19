@@ -27,10 +27,34 @@ export const experience: IExperience[] = [
 
 export const projects: IProject[] = [
   {
-    name: "",
-    url: "",
-    description: "",
-    stack: [],
+    name: "surveyllama",
+    url: "https://github.com/barbaraeguche/surveyllama",
+    description: "a cloud-based survey platform for creating, distributing, and analyzing online surveys",
+    stack: ["react", "node.js", "express", "firebase"],
+  },
+  {
+    name: "risk warzone",
+    url: "https://github.com/barbaraeguche/risk-warzone",
+    description: "a simplified implementation of the warzone strategy game with automated player strategies and tournament mode",
+    stack: ["c++", "cmake"],
+  },
+  {
+    name: "medisync",
+    url: "https://github.com/barbaraeguche/medisync",
+    description: "a healthcare platform for managing patient appointments and doctor schedules",
+    stack: ["react", "redux", "spring boot", "postgresql"],
+  },
+  {
+    name: "pawsitive",
+    url: "https://github.com/barbaraeguche/pawsitive",
+    description: "a pet adoption platform where users can adopt and rehome pets",
+    stack: ["next.js", "zustand", "prisma", "postgresql"],
+  },
+  {
+    name: "eternity",
+    url: "https://github.com/barbaraeguche/eternity",
+    description: "a scientific calculator built to compute various transcendental functions",
+    stack: ["java", "java swing"],
   },
 ];
 
