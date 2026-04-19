@@ -25,7 +25,7 @@ export default function Projects() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
-        Things I've Built
+        things i've built
       </motion.h2>
 
       <motion.div
