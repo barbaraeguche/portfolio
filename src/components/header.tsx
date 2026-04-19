@@ -12,7 +12,7 @@ export default function Header() {
   };
   
   return (
-    <header className="flex items-baseline justify-between pb-6 border-b border-dashed border-rose-paper-line">
+    <header className="flex items-baseline justify-between py-5 border-b border-dashed border-rose-paper-line">
       <span className="font-display-alt font-medium text-[22px] tracking-[-0.01em] text-rose-ink no-underline">
         b. eguche
       </span>
