@@ -24,7 +24,7 @@ export default function Header() {
   
   return (
     <header className="flex items-baseline justify-between py-5 border-b border-dashed border-rose-paper-line">
-      <span className="font-display-alt font-medium text-[22px] tracking-[-0.01em] text-rose-ink no-underline">
+      <span className="font-display-alt font-medium text-[22px] tracking-[-0.01em] text-rose-ink">
         b. eguche
       </span>
       <nav className="flex gap-5.5 text-[13px]">
@@ -33,7 +33,7 @@ export default function Header() {
             key={name}
             href={url}
             onClick={(e) => handleClick(e, name, url)}
-            className={`relative py-0.5 tracking-[0.02em] no-underline transition-colors duration-200 ${active === name ? "font-semibold text-rose-ink" : "font-normal text-rose-ink-soft"}`}
+            className={`relative py-0.5 tracking-[0.02em] no-underline transition-colors duration-200 rounded-sm focus-visible:outline-2 focus-visible:outline-rose-accent focus-visible:outline-offset-3 ${active === name ? "font-semibold text-rose-ink" : "font-normal text-rose-ink-soft"}`}
           >
             {name}
             {active === name && (
