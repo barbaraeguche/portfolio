@@ -65,3 +65,18 @@ html, body, #root {
   opacity: 1;
   transform: translateX(0);
 }
+
+@keyframes cherry-bloom {
+  0%   { transform: scale(0.12) rotate(-25deg); opacity: 0;   filter: brightness(0.7); }  /* tight bud */
+  18%  { transform: scale(1.2)  rotate(10deg);  opacity: 1;   filter: brightness(1.4); }  /* burst open */
+  30%  { transform: scale(1)    rotate(0deg);   opacity: 1;   filter: brightness(1); }    /* settle */
+  65%  { transform: scale(1)    rotate(0deg);   opacity: 1;   filter: brightness(1.05); } /* hold in bloom */
+  86%  { transform: scale(0.9)  rotate(18deg);  opacity: 0.4; filter: brightness(0.85); } /* petals releasing */
+  100% { transform: scale(0.12) rotate(-25deg); opacity: 0;   filter: brightness(0.7); }  /* reset */
+}
+
+.cherry-blossom {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: cherry-bloom 4.5s ease-in-out infinite;
+}

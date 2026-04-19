@@ -1,26 +1,15 @@
-import type { Experience, Project, Socials } from "@/lib/types";
+import type { IExperience, IProject, ISocial } from "@/lib/types";
 
-export const experience: Experience[] = [
-  {
-    company: "",
-    url: "",
-    roles: [{
-      title: "",
-      team: "",
-      period: "",
-      is_internship: true,
-      is_current: true,
-    }],
-  },
+export const experience: IExperience[] = [
   {
     company: "Autodesk",
     url: "https://www.autodesk.com/company",
     roles: [{
       title: "Software Engineer",
       team: "ems | rdo trust",
-      period: "Jan 2026 - Aug 2026",
+      period: "Jan 2026 - Apr 2026",
       is_internship: true,
-      is_current: false,
+      is_current: true,
     }],
   },
   {
@@ -36,26 +25,26 @@ export const experience: Experience[] = [
   },
 ];
 
-export const projects: Project[] = [
+export const projects: IProject[] = [
   {
-    "name": "",
-    "url": "",
-    "description": "",
+    name: "",
+    url: "",
+    description: "",
     stack: [],
   },
 ];
 
-export const socials: Socials[] = [
+export const socials: ISocial[] = [
   {
     name: "email",
-    "url": "mailto:barbareguche@gmail.com",
+    url: "mailto:barbareguche@gmail.com",
   },
   {
     name: "linkedin",
-    "url": "https://www.linkedin.com/in/barbaraeguche/",
+    url: "https://www.linkedin.com/in/barbaraeguche/",
   },
   {
     name: "github",
-    "url": "https://github.com/barbaraeguche",
+    url: "https://github.com/barbaraeguche",
   },
 ];
