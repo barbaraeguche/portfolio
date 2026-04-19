@@ -56,14 +56,12 @@ html, body, #root {
 
 .scene-frame {
   opacity: 0;
-  transform: translateX(40px);
-  transition: opacity .5s ease, transform .5s ease;
+  transition: opacity 0.8s ease;
   pointer-events: none;
 }
 
 .scene-frame.is-active {
   opacity: 1;
-  transform: translateX(0);
 }
 
 @keyframes cherry-bloom {

@@ -10,21 +10,20 @@ export default function CursorTrail({ colors }: { colors: string[] }) {
       z-index: 9999;
       font-size: 20px;
       line-height: 1;
-      color: var(--color-cream-sky);
-      transform: translate(-50%, -50%) rotate(-45deg);
+      color: var(--color-rose-accent);
+      transform: translate(-50%, -50%);
       user-select: none;
       left: -999px;
       top: -999px;
     `;
-    cursor.textContent = "\u2660";
+    cursor.textContent = "\u273f";
     document.body.appendChild(cursor);
 
-    // swap to clover on links or buttons, rotate spade -45deg
+    // swap to flower on links or buttons
     const onOver = (e: MouseEvent) => {
       const isLink = (e.target as Element).closest("a, button") !== null;
-      cursor.textContent = isLink ? "\u2663" : "\u2660";
-      cursor.style.color = isLink ? "var(--color-cream-sage)" : "var(--color-cream-sky)";
-      cursor.style.transform = isLink ? "translate(-50%, -50%)" : "translate(-50%, -50%) rotate(-45deg)";
+      cursor.textContent = isLink ? "\u2665" : "\u273f";
+      cursor.style.color = isLink ? "var(--color-rose-sage)" : "var(--color-rose-accent)";
     };
     document.addEventListener("mouseover", onOver);
 
