@@ -6,7 +6,7 @@ const ROLE_H = 90; // px — must match min-h-22.5 on role rows
 
 export default function Experience() {
   return (
-    <section className="mt-32 pt-5.5 border-t border-dashed border-rose-paper-line">
+    <section id="experience" className="mt-32 pt-5.5 border-t border-dashed border-rose-paper-line">
       <SectionHeader title="file 02 · experience"/>
 
       <div className="space-y-12">
