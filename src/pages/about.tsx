@@ -32,14 +32,10 @@ export default function About() {
             a little more on me
           </span>
           <p className="animate-fade-up [animation-delay:0.54s]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.
+            [placeholder for my bio]
           </p>
           <p className="mt-4 animate-fade-up [animation-delay:0.66s]">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum.
+            [placeholder for my bio]
           </p>
         </div>
 

@@ -7,7 +7,7 @@ export const experience: IExperience[] = [
     roles: [{
       title: "Software Engineer",
       team: "rdo trust | code coverage analysis on 3ds max & maya",
-      period: "Jan 2026 - Apr 2026",
+      period: "Jan 2026 - Present",
       is_internship: true,
       is_current: true,
     }],
