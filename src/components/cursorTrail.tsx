@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export default function CursorTrail({ colors }: { colors: string[] }) {
   useEffect(() => {
-    // spade cursor element — starts offscreen to avoid corner flash
+    // flower cursor element — starts offscreen to avoid corner flash
     const cursor = document.createElement("div");
     cursor.style.cssText = `
       position: fixed;
@@ -19,11 +19,11 @@ export default function CursorTrail({ colors }: { colors: string[] }) {
     cursor.textContent = "\u273f";
     document.body.appendChild(cursor);
 
-    // swap to flower on links or buttons
+    // swap to heart on links or buttons
     const onOver = (e: MouseEvent) => {
       const isLink = (e.target as Element).closest("a, button") !== null;
       cursor.textContent = isLink ? "\u2665" : "\u273f";
-      cursor.style.color = isLink ? "var(--color-rose-sage)" : "var(--color-rose-accent)";
+      cursor.style.color = isLink ? "var(--color-rose-sky)" : "var(--color-rose-accent)";
     };
     document.addEventListener("mouseover", onOver);
 
