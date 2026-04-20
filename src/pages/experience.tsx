@@ -83,9 +83,9 @@ function Blossom({ cx, y, role }: {
 }) {
   const { is_current } = role;
   
-  const petalFill = is_current ? "#ffb7c5" : "#9a8070";
-  const petalStroke = is_current ? "#d4789a" : "#6a5040";
-  const centerFill = is_current ? "#fff0a0" : "#7a6050";
+  const petalFill = is_current ? "url(#petal-bloom)" : "#9a8070";
+  const petalStroke = is_current ? "#c05070" : "#6a5040";
+  const centerFill = is_current ? "#f0c040" : "#7a6050";
   const angles = [0, 72, 144, 216, 288];
 
   const blossom = (
@@ -104,7 +104,10 @@ function Blossom({ cx, y, role }: {
       {is_current && angles.map((a) => {
         const rad = (a - 90) * (Math.PI / 180);
         return (
-          <line key={a} x1={0} y1={0} x2={Math.cos(rad) * 7} y2={Math.sin(rad) * 7} stroke="#e8c060" strokeWidth="0.9" strokeLinecap="round"/>
+          <g key={a}>
+            <line x1={0} y1={0} x2={Math.cos(rad) * 9} y2={Math.sin(rad) * 9} stroke="#e8a820" strokeWidth="1.2" strokeLinecap="round"/>
+            <circle cx={Math.cos(rad) * 9} cy={Math.sin(rad) * 9} r={1.2} fill="#f0c840"/>
+          </g>
         );
       })}
     </g>
@@ -125,10 +128,17 @@ function Blossom({ cx, y, role }: {
 
 function BranchWithThorns({ roles }: { roles: IExperience["roles"] }) {
   const h = roles.length * ROLE_H;
-  const cx = 18;
+  const cx = 24;
 
   return (
-    <svg width="52" height={h} viewBox={`0 0 52 ${h}`} fill="none" aria-hidden="true">
+    <svg width="68" height={h} viewBox={`0 0 68 ${h}`} fill="none" aria-hidden="true">
+      <defs>
+        <radialGradient id="petal-bloom" cx="0" cy="0" r="17" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#c8405a"/>
+          <stop offset="40%" stopColor="#f0a0b8"/>
+          <stop offset="100%" stopColor="#fff5f7"/>
+        </radialGradient>
+      </defs>
       <line x1={cx} y1={0} x2={cx} y2={h} stroke="#5a3a28" strokeWidth="2" strokeLinecap="round"/>
       <path d={buildVinePath(cx, h)} stroke="#4a2a18" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.85"/>
       <path d={buildThorns(cx, h)} fill="#5a3a28" stroke="#3a1a08" strokeWidth="0.5" opacity="0.8"/>
