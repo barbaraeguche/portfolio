@@ -23,7 +23,7 @@ export default function CursorTrail({ colors }: { colors: string[] }) {
     const onOver = (e: MouseEvent) => {
       const isLink = (e.target as Element).closest("a, button") !== null;
       cursor.textContent = isLink ? "\u2665" : "\u273f";
-      cursor.style.color = isLink ? "var(--color-rose-sage)" : "var(--color-rose-accent)";
+      cursor.style.color = isLink ? "var(--color-rose-sky)" : "var(--color-rose-accent)";
     };
     document.addEventListener("mouseover", onOver);
 
