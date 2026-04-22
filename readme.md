@@ -1,4 +1,4 @@
-## portfolio 🫶🏾
+## portfolio 🌸
 
 ## running the project 🏁
 to get the project up and running on your local machine, follow these steps:
