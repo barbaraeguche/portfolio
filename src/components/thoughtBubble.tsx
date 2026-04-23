@@ -1,4 +1,4 @@
-import ASCII_SCENES from "@/lib/asciiScenes";
+import SCENES from "@/lib/thoughtScenes";
 import { useEffect, useState } from "react";
 
 const ROTATE_SECONDS = 9;
@@ -23,7 +23,7 @@ const cloudPath =
   "C 95 298 75 278 90 255 Z";
 
 export default function ThoughtBubble() {
-  const scenes = ASCII_SCENES;
+  const scenes = SCENES;
   const [idx, setIdx] = useState(0);
   
   useEffect(() => {
@@ -103,16 +103,17 @@ export default function ThoughtBubble() {
           </g>
         </svg>
         
-        <div className="absolute inset-[7%_14%_30%_14%] flex items-center justify-center animate-fade-up [animation-delay:1.1s]">
+        {/* svg scenes rendered as inline html over the cloud */}
+        <div className="absolute inset-[12%_16%_25%_10%] flex items-center justify-center animate-fade-up [animation-delay:1.1s]">
           {scenes.map((s, i) => (
             <div
               key={i}
               className={`scene-frame absolute inset-0 flex items-center justify-center ${i === idx ? "is-active" : ""}`}
             >
-              <pre
-                className="font-mono text-[clamp(8px,1.05vw,11px)] leading-[1.08] text-rose-ink whitespace-pre text-center m-0 tracking-[0.02em]">
-                {s.art}
-              </pre>
+              <div
+                className="w-[70%] h-[85%]"
+                dangerouslySetInnerHTML={{ __html: s.svg }}
+              />
             </div>
           ))}
         </div>
