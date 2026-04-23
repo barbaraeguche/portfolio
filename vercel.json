@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    { "source": "/about", "destination": "/#about", "permanent": true },
+    { "source": "/experience", "destination": "/#experience", "permanent": true },
+    { "source": "/projects", "destination": "/#projects", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
