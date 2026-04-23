@@ -2,14 +2,25 @@ import type { IExperience, IProject, ISocial } from "@/lib/types";
 
 export const experience: IExperience[] = [
   {
+    company: "XX",
+    url: "#",
+    roles: [{
+      title: "Software Engineer",
+      team: "xx | xx",
+      period: "Incoming Summer '26",
+      is_internship: true,
+      is_current: true,
+    }],
+  },
+  {
     company: "Autodesk",
     url: "https://www.autodesk.com/company",
     roles: [{
       title: "Software Engineer",
       team: "rdo trust | code coverage analysis on 3ds max & maya",
-      period: "Jan 2026 - Present",
+      period: "Jan 2026 - Apr 2026",
       is_internship: true,
-      is_current: true,
+      is_current: false,
     }],
   },
   {
