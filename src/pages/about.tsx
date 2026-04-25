@@ -32,10 +32,12 @@ export default function About() {
             a little more on me
           </span>
           <p className="animate-fade-up [animation-delay:0.54s]">
-            [placeholder for my bio]
+            i worked on code coverage analysis at autodesk and built frontend interfaces at radio-ip. outside of that,
+            i'm drawn to infra, databases, and their intersection with finance, with hardware further down the road.
           </p>
           <p className="mt-4 animate-fade-up [animation-delay:0.66s]">
-            [placeholder for my bio]
+            when i'm not coding, i'm learning to skate, going out for brunch or picnic dates, reading romance novels,
+            brushing up on my french, and slowly getting into knitting.
           </p>
         </div>
 
