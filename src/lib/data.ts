@@ -2,8 +2,8 @@ import type { IExperience, IProject, ISocial } from "@/lib/types";
 
 export const experience: IExperience[] = [
   {
-    company: "XX",
-    url: "#",
+    company: "Bloomberg",
+    url: "https://www.bloomberg.com/company/",
     roles: [{
       title: "Software Engineer",
       team: "xx | xx",
