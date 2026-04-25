@@ -1,7 +1,7 @@
 import SCENES from "@/lib/thoughtScenes";
 import { useEffect, useState } from "react";
 
-const ROTATE_SECONDS = 9;
+const ROTATE_SECONDS = 7;
 
 // cloud outline path — bumpy top, smooth rounded bottom
 const cloudPath =
@@ -104,14 +104,14 @@ export default function ThoughtBubble() {
         </svg>
         
         {/* svg scenes rendered as inline html over the cloud */}
-        <div className="absolute inset-[12%_16%_25%_10%] flex items-center justify-center animate-fade-up [animation-delay:1.1s]">
+        <div className="absolute inset-[12%_16%_25%_10%] animate-fade-up [animation-delay:1.1s]">
           {scenes.map((s, i) => (
             <div
               key={i}
-              className={`scene-frame absolute inset-0 flex items-center justify-center ${i === idx ? "is-active" : ""}`}
+              className={`scene-frame absolute inset-0 ${i === idx ? "is-active" : ""}`}
             >
               <div
-                className="w-[70%] h-[85%]"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[75%]"
                 dangerouslySetInnerHTML={{ __html: s.svg }}
               />
             </div>
