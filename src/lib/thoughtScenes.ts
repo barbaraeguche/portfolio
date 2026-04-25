@@ -7,76 +7,162 @@ const SCENES: AsciiScene[] = [
   {
     label: "ice skating",
     svg: `
-      <svg width="100%" height="100%" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
-        <g stroke="#b5727a" stroke-linecap="round" stroke-linejoin="round" fill="none">
-          <text x="10" y="14" font-size="9" fill="#b5727a" stroke="none" font-family="serif" opacity="0.5">❅</text>
-          <text x="95" y="20" font-size="7" fill="#b5727a" stroke="none" font-family="serif" opacity="0.5">❆</text>
-          <text x="55" y="10" font-size="6" fill="#b5727a" stroke="none" font-family="serif" opacity="0.4">*</text>
-          <circle cx="60" cy="32" r="11" stroke-width="1.2"/>
-          <path d="M49 26 Q38 18 36 30 Q34 42 40 52 Q44 62 46 75 Q48 88 50 100" stroke-width="1.4"/>
-          <path d="M71 26 Q82 18 84 30 Q86 42 80 52 Q76 62 74 75 Q72 88 70 100" stroke-width="1.4"/>
-          <path d="M50 22 Q48 10 60 8 Q72 10 70 22" stroke-width="1.2"/>
-          <path d="M40 35 Q32 50 34 68 Q36 82 40 95" stroke-width="1"/>
-          <path d="M80 35 Q88 50 86 68 Q84 82 80 95" stroke-width="1"/>
-          <path d="M52 23 Q55 20 58 23" stroke-width="1.2"/>
-          <circle cx="55" cy="21" r="1.5" stroke-width="1"/>
-          <line x1="55" y1="31" x2="58" y2="31" stroke-width="1.3"/>
-          <line x1="62" y1="31" x2="65" y2="31" stroke-width="1.3"/>
-          <line x1="55" y1="31" x2="54" y2="29" stroke-width="0.8"/>
-          <line x1="65" y1="31" x2="66" y2="29" stroke-width="0.8"/>
-          <path d="M57 36 Q60 38 63 36" stroke-width="1"/>
-          <circle cx="49" cy="35" r="1.5" stroke-width="1"/>
-          <line x1="60" y1="43" x2="60" y2="50" stroke-width="1.2"/>
-          <path d="M44 50 Q60 46 76 50 L78 76 Q60 81 42 76 Z" stroke-width="1.2"/>
-          <path d="M56 50 Q60 54 64 50" stroke-width="1"/>
-          <path d="M42 76 Q36 82 30 80" stroke-width="1.2"/>
-          <path d="M78 76 Q84 82 90 80" stroke-width="1.2"/>
-          <path d="M46 76 Q44 85 40 90" stroke-width="1.2"/>
-          <path d="M74 76 Q76 85 80 90" stroke-width="1.2"/>
-          <path d="M44 57 Q30 54 20 58" stroke-width="1.2"/>
-          <path d="M76 57 Q90 54 100 58" stroke-width="1.2"/>
-          <path d="M50 76 L46 104" stroke-width="1.2"/>
-          <path d="M70 76 L74 104" stroke-width="1.2"/>
-          <path d="M38 104 L52 104" stroke-width="1.5"/>
-          <path d="M68 104 L82 104" stroke-width="1.5"/>
-          <line x1="43" y1="104" x2="43" y2="108" stroke-width="1"/>
-          <line x1="75" y1="104" x2="75" y2="108" stroke-width="1"/>
-          <path d="M8 118 Q60 113 112 118" stroke-width="1" opacity="0.5"/>
-          <path d="M4 123 Q60 118 116 123" stroke-width="0.7" opacity="0.3"/>
+      <svg width="100%" height="100%" viewBox="0 0 200 180" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <!-- snowy mountain bg -->
+        <path d="M0 120 L40 80 L80 100 L120 70 L160 90 L200 110 L200 180 L0 180 Z" fill="#e8f4f8" opacity="0.3"/>
+        <!-- snowflakes -->
+        <g fill="#a8d5e8" opacity="0.6">
+          <circle cx="30" cy="20" r="1.5"/>
+          <circle cx="170" cy="35" r="2"/>
+          <circle cx="90" cy="15" r="1.2"/>
+          <circle cx="140" cy="45" r="1.8"/>
+          <circle cx="60" cy="55" r="1.3"/>
+          <circle cx="155" cy="60" r="1"/>
         </g>
+
+        <!-- barbara - PPG style -->
+        <g transform="translate(100, 116)">
+          <!-- hair puffs -->
+          <circle cx="-17" cy="-55" r="12" fill="#2d1810" stroke="#1a0d08" stroke-width="2"/>
+          <circle cx="17" cy="-55" r="12" fill="#2d1810" stroke="#1a0d08" stroke-width="2"/>
+          <circle cx="0" cy="-60" r="13" fill="#2d1810" stroke="#1a0d08" stroke-width="2"/>
+          <!-- head -->
+          <circle cx="0" cy="-38" r="19" fill="#8b5a3c" stroke="#1a0d08" stroke-width="2.5"/>
+          <!-- PPG eyes - huge ovals -->
+          <ellipse cx="-7.5" cy="-39" rx="7" ry="9" fill="white" stroke="#1a0d08" stroke-width="1.5"/>
+          <ellipse cx="7.5" cy="-39" rx="7" ry="9" fill="white" stroke="#1a0d08" stroke-width="1.5"/>
+          <ellipse cx="-7.5" cy="-38" rx="5.5" ry="7.5" fill="#1a0d08"/>
+          <ellipse cx="7.5" cy="-38" rx="5.5" ry="7.5" fill="#1a0d08"/>
+          <circle cx="-5" cy="-41" r="2" fill="white" opacity="0.9"/>
+          <circle cx="10" cy="-41" r="2" fill="white" opacity="0.9"/>
+          <!-- mouth -->
+          <path d="M-4 -27 Q0 -24 4 -27" stroke="#8b3838" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <!-- body - PPG trapezoid dress (narrow top, flares at bottom) -->
+          <path d="M-10 -19 L-14 6 Q-14 11 -9 11 L9 11 Q14 11 14 6 L10 -19 Z" fill="#ff3377" stroke="#1a0d08" stroke-width="2.5"/>
+          <!-- stub arm circles -->
+          <circle cx="-18" cy="-10" r="5.5" fill="#ff3377" stroke="#1a0d08" stroke-width="2"/>
+          <circle cx="18" cy="-10" r="5.5" fill="#ff3377" stroke="#1a0d08" stroke-width="2"/>
+          <!-- boots -->
+          <ellipse cx="-6" cy="14" rx="7" ry="4" fill="#f4a0b5" stroke="#1a0d08" stroke-width="1.5"/>
+          <ellipse cx="6" cy="14" rx="7" ry="4" fill="#f4a0b5" stroke="#1a0d08" stroke-width="1.5"/>
+          <!-- skate blades -->
+          <line x1="-13" y1="18" x2="1" y2="18" stroke="#5a6a70" stroke-width="2" stroke-linecap="round"/>
+          <line x1="-1" y1="18" x2="13" y2="18" stroke="#5a6a70" stroke-width="2" stroke-linecap="round"/>
+        </g>
+
+        <!-- ice surface -->
+        <ellipse cx="100" cy="148" rx="80" ry="7" fill="#d4e8f0" opacity="0.5"/>
+        <path d="M20 151 Q100 149 180 151" stroke="#a8d5e8" stroke-width="1" fill="none" opacity="0.6"/>
       </svg>
     `,
   },
   {
     label: "picnic with friends",
     svg: `
-      <svg width="100%" height="100%" viewBox="0 0 120 130" xmlns="http://www.w3.org/2000/svg">
-        <g stroke="#b5727a" stroke-linecap="round" stroke-linejoin="round" fill="none">
-          <circle cx="60" cy="16" r="7" stroke-width="1.2"/>
-          <line x1="60" y1="5" x2="60" y2="2" stroke-width="1"/>
-          <line x1="60" y1="27" x2="60" y2="30" stroke-width="1"/>
-          <line x1="49" y1="10" x2="47" y2="8" stroke-width="1"/>
-          <line x1="71" y1="10" x2="73" y2="8" stroke-width="1"/>
-          <line x1="49" y1="22" x2="47" y2="24" stroke-width="1"/>
-          <line x1="71" y1="22" x2="73" y2="24" stroke-width="1"/>
-          <circle cx="28" cy="58" r="8" stroke-width="1.2"/>
-          <path d="M22 53 Q20 48 22 46" stroke-width="1"/>
-          <path d="M20 64 Q14 66 12 70" stroke-width="1.2"/>
-          <path d="M36 64 Q40 68 38 72" stroke-width="1.2"/>
-          <path d="M24 66 L18 80" stroke-width="1.2"/>
-          <path d="M32 66 L34 80" stroke-width="1.2"/>
-          <circle cx="92" cy="58" r="8" stroke-width="1.2"/>
-          <path d="M86 53 Q84 48 86 46" stroke-width="1"/>
-          <path d="M84 64 Q78 66 76 70" stroke-width="1.2"/>
-          <path d="M100 64 Q104 68 102 72" stroke-width="1.2"/>
-          <path d="M88 66 L82 80" stroke-width="1.2"/>
-          <path d="M96 66 L98 80" stroke-width="1.2"/>
-          <path d="M10 90 Q60 85 110 90 L108 100 Q60 96 12 100 Z" stroke-width="1.2" opacity="0.6"/>
-          <circle cx="45" cy="88" r="4" stroke-width="1"/>
-          <path d="M52 88 Q55 84 58 88" stroke-width="1"/>
-          <circle cx="65" cy="87" r="3" stroke-width="1"/>
-          <path d="M72 84 L72 92 M68 88 L76 88" stroke-width="1"/>
-          <path d="M5 105 Q60 100 115 105" stroke-width="1" opacity="0.4"/>
+      <svg width="100%" height="100%" viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg">
+        <!-- sun -->
+        <circle cx="200" cy="28" r="15" fill="#ffcc00" opacity="0.7"/>
+        <g stroke="#ffcc00" stroke-width="2" opacity="0.5">
+          <line x1="200" y1="8" x2="200" y2="0"/>
+          <line x1="220" y1="28" x2="228" y2="28"/>
+          <line x1="213" y1="15" x2="219" y2="9"/>
+          <line x1="213" y1="41" x2="219" y2="47"/>
+        </g>
+        <!-- grass -->
+        <rect x="0" y="150" width="240" height="30" fill="#55cc66" opacity="0.3"/>
+        <!-- picnic blanket -->
+        <rect x="35" y="130" width="170" height="28" fill="#ff99bb" opacity="0.3" rx="3"/>
+        <line x1="120" y1="130" x2="120" y2="158" stroke="#cc3366" stroke-width="1" opacity="0.3"/>
+        <line x1="35" y1="144" x2="205" y2="144" stroke="#cc3366" stroke-width="1" opacity="0.3"/>
+
+        <!-- barbara - left, PPG style -->
+        <g transform="translate(62, 140)">
+          <circle cx="-13" cy="-43" r="9" fill="#2d1810" stroke="#1a0d08" stroke-width="1.5"/>
+          <circle cx="13" cy="-43" r="9" fill="#2d1810" stroke="#1a0d08" stroke-width="1.5"/>
+          <circle cx="0" cy="-48" r="10" fill="#2d1810" stroke="#1a0d08" stroke-width="1.5"/>
+          <circle cx="0" cy="-29" r="15" fill="#8b5a3c" stroke="#1a0d08" stroke-width="2"/>
+          <ellipse cx="-6" cy="-30" rx="5.5" ry="7" fill="white" stroke="#1a0d08" stroke-width="1.2"/>
+          <ellipse cx="6" cy="-30" rx="5.5" ry="7" fill="white" stroke="#1a0d08" stroke-width="1.2"/>
+          <ellipse cx="-6" cy="-29" rx="4" ry="5.5" fill="#1a0d08"/>
+          <ellipse cx="6" cy="-29" rx="4" ry="5.5" fill="#1a0d08"/>
+          <circle cx="-4" cy="-32" r="1.5" fill="white" opacity="0.9"/>
+          <circle cx="8" cy="-32" r="1.5" fill="white" opacity="0.9"/>
+          <path d="M-3 -21 Q0 -19 3 -21" stroke="#8b3838" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <!-- trapezoid dress -->
+          <path d="M-8 -14 L-11 4 Q-11 8 -7 8 L7 8 Q11 8 11 4 L8 -14 Z" fill="#ff3377" stroke="#1a0d08" stroke-width="2"/>
+          <circle cx="-15" cy="-8" r="4.5" fill="#ff3377" stroke="#1a0d08" stroke-width="1.5"/>
+          <circle cx="15" cy="-8" r="4.5" fill="#ff3377" stroke="#1a0d08" stroke-width="1.5"/>
+          <ellipse cx="-5" cy="10" rx="5" ry="3" fill="#8b5a3c" stroke="#1a0d08" stroke-width="1.2"/>
+          <ellipse cx="5" cy="10" rx="5" ry="3" fill="#8b5a3c" stroke="#1a0d08" stroke-width="1.2"/>
+        </g>
+
+        <!-- friend 1 - middle, PPG style -->
+        <g transform="translate(120, 140)">
+          <circle cx="-12" cy="-42" r="8" fill="#4a2f1a" stroke="#1a0d08" stroke-width="1.5"/>
+          <circle cx="12" cy="-42" r="8" fill="#4a2f1a" stroke="#1a0d08" stroke-width="1.5"/>
+          <circle cx="0" cy="-29" r="15" fill="#d4a574" stroke="#1a0d08" stroke-width="2"/>
+          <ellipse cx="-6" cy="-30" rx="5.5" ry="7" fill="white" stroke="#1a0d08" stroke-width="1.2"/>
+          <ellipse cx="6" cy="-30" rx="5.5" ry="7" fill="white" stroke="#1a0d08" stroke-width="1.2"/>
+          <ellipse cx="-6" cy="-29" rx="4" ry="5.5" fill="#1a0d08"/>
+          <ellipse cx="6" cy="-29" rx="4" ry="5.5" fill="#1a0d08"/>
+          <circle cx="-4" cy="-32" r="1.5" fill="white" opacity="0.9"/>
+          <circle cx="8" cy="-32" r="1.5" fill="white" opacity="0.9"/>
+          <path d="M-3 -21 Q0 -19 3 -21" stroke="#8b3838" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <path d="M-8 -14 L-11 4 Q-11 8 -7 8 L7 8 Q11 8 11 4 L8 -14 Z" fill="#4488ff" stroke="#1a0d08" stroke-width="2"/>
+          <circle cx="-15" cy="-8" r="4.5" fill="#4488ff" stroke="#1a0d08" stroke-width="1.5"/>
+          <circle cx="15" cy="-8" r="4.5" fill="#4488ff" stroke="#1a0d08" stroke-width="1.5"/>
+          <ellipse cx="-5" cy="10" rx="5" ry="3" fill="#d4a574" stroke="#1a0d08" stroke-width="1.2"/>
+          <ellipse cx="5" cy="10" rx="5" ry="3" fill="#d4a574" stroke="#1a0d08" stroke-width="1.2"/>
+        </g>
+
+        <!-- friend 2 - right, PPG style -->
+        <g transform="translate(178, 140)">
+          <circle cx="-11" cy="-41" r="8" fill="#1a0d08" stroke="#0a0505" stroke-width="1.5"/>
+          <circle cx="11" cy="-41" r="8" fill="#1a0d08" stroke="#0a0505" stroke-width="1.5"/>
+          <circle cx="0" cy="-29" r="15" fill="#c49a7c" stroke="#1a0d08" stroke-width="2"/>
+          <ellipse cx="-6" cy="-30" rx="5.5" ry="7" fill="white" stroke="#1a0d08" stroke-width="1.2"/>
+          <ellipse cx="6" cy="-30" rx="5.5" ry="7" fill="white" stroke="#1a0d08" stroke-width="1.2"/>
+          <ellipse cx="-6" cy="-29" rx="4" ry="5.5" fill="#1a0d08"/>
+          <ellipse cx="6" cy="-29" rx="4" ry="5.5" fill="#1a0d08"/>
+          <circle cx="-4" cy="-32" r="1.5" fill="white" opacity="0.9"/>
+          <circle cx="8" cy="-32" r="1.5" fill="white" opacity="0.9"/>
+          <path d="M-3 -21 Q0 -19 3 -21" stroke="#8b3838" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <path d="M-8 -14 L-11 4 Q-11 8 -7 8 L7 8 Q11 8 11 4 L8 -14 Z" fill="#22cc66" stroke="#1a0d08" stroke-width="2"/>
+          <circle cx="-15" cy="-8" r="4.5" fill="#22cc66" stroke="#1a0d08" stroke-width="1.5"/>
+          <circle cx="15" cy="-8" r="4.5" fill="#22cc66" stroke="#1a0d08" stroke-width="1.5"/>
+          <ellipse cx="-5" cy="10" rx="5" ry="3" fill="#c49a7c" stroke="#1a0d08" stroke-width="1.2"/>
+          <ellipse cx="5" cy="10" rx="5" ry="3" fill="#c49a7c" stroke="#1a0d08" stroke-width="1.2"/>
+        </g>
+
+        <!-- picnic items -->
+        <circle cx="93" cy="141" r="5" fill="#c89240" opacity="0.7"/>
+        <circle cx="148" cy="143" r="4" fill="#ff6655" opacity="0.7"/>
+        <rect x="108" y="144" width="10" height="12" fill="#ffbb44" opacity="0.6" rx="1"/>
+
+        <!-- grass blades around blanket edges -->
+        <g stroke="#55aa44" stroke-width="1.2" stroke-linecap="round" opacity="0.55">
+          <line x1="28" y1="160" x2="24" y2="150"/>
+          <line x1="33" y1="160" x2="37" y2="149"/>
+          <line x1="208" y1="160" x2="205" y2="150"/>
+          <line x1="213" y1="160" x2="217" y2="150"/>
+          <line x1="20" y1="165" x2="18" y2="156"/>
+          <line x1="220" y1="165" x2="223" y2="156"/>
+        </g>
+        <!-- small flower left of blanket -->
+        <g transform="translate(21, 153)" opacity="0.85">
+          <circle cx="0" cy="-3.5" r="2" fill="#ffbbdd"/>
+          <circle cx="0" cy="3.5" r="2" fill="#ffbbdd"/>
+          <circle cx="-3.5" cy="0" r="2" fill="#ffbbdd"/>
+          <circle cx="3.5" cy="0" r="2" fill="#ffbbdd"/>
+          <circle cx="0" cy="0" r="2.2" fill="#ffee55"/>
+        </g>
+        <!-- small flower right of blanket -->
+        <g transform="translate(219, 156)" opacity="0.75">
+          <circle cx="0" cy="-3" r="1.7" fill="#ffbbdd"/>
+          <circle cx="0" cy="3" r="1.7" fill="#ffbbdd"/>
+          <circle cx="-3" cy="0" r="1.7" fill="#ffbbdd"/>
+          <circle cx="3" cy="0" r="1.7" fill="#ffbbdd"/>
+          <circle cx="0" cy="0" r="1.9" fill="#ffee55"/>
         </g>
       </svg>
     `,
@@ -84,38 +170,98 @@ const SCENES: AsciiScene[] = [
   {
     label: "brunch dates",
     svg: `
-      <svg width="100%" height="100%" viewBox="0 0 120 130" xmlns="http://www.w3.org/2000/svg">
-        <g stroke="#b5727a" stroke-linecap="round" stroke-linejoin="round" fill="none">
-          <rect x="15" y="10" width="38" height="32" rx="3" stroke-width="1.2" opacity="0.5"/>
-          <line x1="34" y1="10" x2="34" y2="42" stroke-width="0.8" opacity="0.5"/>
-          <line x1="15" y1="26" x2="53" y2="26" stroke-width="0.8" opacity="0.5"/>
-          <rect x="67" y="10" width="38" height="32" rx="3" stroke-width="1.2" opacity="0.5"/>
-          <line x1="86" y1="10" x2="86" y2="42" stroke-width="0.8" opacity="0.5"/>
-          <line x1="67" y1="26" x2="105" y2="26" stroke-width="0.8" opacity="0.5"/>
-          <circle cx="34" cy="60" r="9" stroke-width="1.2"/>
-          <path d="M27 56 Q24 50 26 47" stroke-width="1"/>
-          <path d="M25 68 Q18 70 16 76" stroke-width="1.2"/>
-          <path d="M43 68 Q48 70 50 76" stroke-width="1.2"/>
-          <path d="M30 69 L26 88" stroke-width="1.2"/>
-          <path d="M38 69 L42 88" stroke-width="1.2"/>
-          <circle cx="86" cy="60" r="9" stroke-width="1.2"/>
-          <path d="M79 56 Q76 50 78 47" stroke-width="1"/>
-          <path d="M77 68 Q70 70 68 76" stroke-width="1.2"/>
-          <path d="M95 68 Q100 70 102 76" stroke-width="1.2"/>
-          <path d="M82 69 L78 88" stroke-width="1.2"/>
-          <path d="M90 69 L94 88" stroke-width="1.2"/>
-          <path d="M8 90 L112 90" stroke-width="1.5"/>
-          <path d="M26 82 Q26 90 34 90 Q42 90 42 82 Z" stroke-width="1"/>
-          <path d="M42 85 Q46 85 46 82" stroke-width="0.8"/>
-          <path d="M78 82 Q78 90 86 90 Q94 90 94 82 Z" stroke-width="1"/>
-          <path d="M94 85 Q98 85 98 82" stroke-width="0.8"/>
-          <path d="M32 80 Q33 76 32 73" stroke-width="0.8" opacity="0.5"/>
-          <path d="M36 80 Q37 76 36 73" stroke-width="0.8" opacity="0.5"/>
-          <path d="M84 80 Q85 76 84 73" stroke-width="0.8" opacity="0.5"/>
-          <path d="M88 80 Q89 76 88 73" stroke-width="0.8" opacity="0.5"/>
-          <ellipse cx="60" cy="88" rx="10" ry="3" stroke-width="1"/>
-          <ellipse cx="60" cy="84" rx="9" ry="2.5" stroke-width="1"/>
-          <ellipse cx="60" cy="80" rx="8" ry="2.5" stroke-width="1"/>
+      <svg width="100%" height="100%" viewBox="0 0 220 180" xmlns="http://www.w3.org/2000/svg">
+        <!-- table -->
+        <rect x="20" y="108" width="180" height="55" fill="#8a6a4a" opacity="0.2" rx="4"/>
+        <rect x="15" y="103" width="190" height="10" fill="#a07850" opacity="0.3" rx="2"/>
+
+        <!-- barbara - left, PPG style -->
+        <g transform="translate(65, 116)">
+          <circle cx="-14" cy="-48" r="10" fill="#2d1810" stroke="#1a0d08" stroke-width="1.5"/>
+          <circle cx="14" cy="-48" r="10" fill="#2d1810" stroke="#1a0d08" stroke-width="1.5"/>
+          <circle cx="0" cy="-53" r="11" fill="#2d1810" stroke="#1a0d08" stroke-width="1.5"/>
+          <circle cx="0" cy="-33" r="16" fill="#8b5a3c" stroke="#1a0d08" stroke-width="2.2"/>
+          <ellipse cx="-6.5" cy="-34" rx="6" ry="7.5" fill="white" stroke="#1a0d08" stroke-width="1.4"/>
+          <ellipse cx="6.5" cy="-34" rx="6" ry="7.5" fill="white" stroke="#1a0d08" stroke-width="1.4"/>
+          <ellipse cx="-6.5" cy="-33" rx="4.5" ry="6" fill="#1a0d08"/>
+          <ellipse cx="6.5" cy="-33" rx="4.5" ry="6" fill="#1a0d08"/>
+          <circle cx="-4.5" cy="-36" r="1.7" fill="white" opacity="0.9"/>
+          <circle cx="8.5" cy="-36" r="1.7" fill="white" opacity="0.9"/>
+          <path d="M-3.5 -24 Q0 -21 3.5 -24" stroke="#8b3838" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+          <!-- trapezoid dress -->
+          <path d="M-10 -17 L-13 5 Q-13 9 -8 9 L8 9 Q13 9 13 5 L10 -17 Z" fill="#ff3377" stroke="#1a0d08" stroke-width="2.2"/>
+          <!-- arms reaching toward coffee -->
+          <circle cx="-17" cy="-10" r="5.5" fill="#ff3377" stroke="#1a0d08" stroke-width="1.8"/>
+          <circle cx="17" cy="-10" r="5.5" fill="#ff3377" stroke="#1a0d08" stroke-width="1.8"/>
+        </g>
+
+        <!-- friend - right, PPG style -->
+        <g transform="translate(155, 116)">
+          <circle cx="-12" cy="-46" r="9" fill="#4a2f1a" stroke="#1a0d08" stroke-width="1.5"/>
+          <circle cx="12" cy="-46" r="9" fill="#4a2f1a" stroke="#1a0d08" stroke-width="1.5"/>
+          <circle cx="0" cy="-33" r="16" fill="#d4a574" stroke="#1a0d08" stroke-width="2.2"/>
+          <ellipse cx="-6.5" cy="-34" rx="6" ry="7.5" fill="white" stroke="#1a0d08" stroke-width="1.4"/>
+          <ellipse cx="6.5" cy="-34" rx="6" ry="7.5" fill="white" stroke="#1a0d08" stroke-width="1.4"/>
+          <ellipse cx="-6.5" cy="-33" rx="4.5" ry="6" fill="#1a0d08"/>
+          <ellipse cx="6.5" cy="-33" rx="4.5" ry="6" fill="#1a0d08"/>
+          <circle cx="-4.5" cy="-36" r="1.7" fill="white" opacity="0.9"/>
+          <circle cx="8.5" cy="-36" r="1.7" fill="white" opacity="0.9"/>
+          <path d="M-3.5 -24 Q0 -21 3.5 -24" stroke="#8b3838" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+          <path d="M-10 -17 L-13 5 Q-13 9 -8 9 L8 9 Q13 9 13 5 L10 -17 Z" fill="#4488ff" stroke="#1a0d08" stroke-width="2.2"/>
+          <circle cx="-17" cy="-10" r="5.5" fill="#4488ff" stroke="#1a0d08" stroke-width="1.8"/>
+          <circle cx="17" cy="-10" r="5.5" fill="#4488ff" stroke="#1a0d08" stroke-width="1.8"/>
+        </g>
+
+        <!-- coffee cups -->
+        <g transform="translate(42, 133)">
+          <rect x="-6" y="0" width="12" height="14" fill="#8a6a4a" stroke="#3d2817" stroke-width="1.2" rx="2"/>
+          <ellipse cx="0" cy="0" rx="6" ry="2" fill="#5a4a3a" stroke="#3d2817" stroke-width="1"/>
+          <path d="M6 4 Q10 4 10 8 Q10 12 6 12" stroke="#3d2817" stroke-width="1.2" fill="none"/>
+          <path d="M-2 -3 Q0 -6 2 -3" stroke="#aaaaaa" stroke-width="0.8" fill="none" opacity="0.5"/>
+        </g>
+        <g transform="translate(178, 133)">
+          <rect x="-6" y="0" width="12" height="14" fill="#8a6a4a" stroke="#3d2817" stroke-width="1.2" rx="2"/>
+          <ellipse cx="0" cy="0" rx="6" ry="2" fill="#5a4a3a" stroke="#3d2817" stroke-width="1"/>
+          <path d="M6 4 Q10 4 10 8 Q10 12 6 12" stroke="#3d2817" stroke-width="1.2" fill="none"/>
+          <path d="M-2 -3 Q0 -6 2 -3" stroke="#aaaaaa" stroke-width="0.8" fill="none" opacity="0.5"/>
+        </g>
+
+        <!-- pancakes stack (center) -->
+        <g transform="translate(110, 142)">
+          <ellipse cx="0" cy="0" rx="12" ry="3" fill="#f4d03f" stroke="#c89240" stroke-width="1"/>
+          <ellipse cx="0" cy="-4" rx="11" ry="3" fill="#f4d03f" stroke="#c89240" stroke-width="1"/>
+          <ellipse cx="0" cy="-8" rx="10" ry="2.5" fill="#f4d03f" stroke="#c89240" stroke-width="1"/>
+          <path d="M-2 -10 L-2 -16 Q-2 -18 0 -18 Q2 -18 2 -16 L2 -10" fill="#c89240" stroke="#8a6240" stroke-width="0.8"/>
+        </g>
+
+        <!-- croissant on small plate -->
+        <g transform="translate(78, 137)">
+          <ellipse cx="0" cy="3" rx="9" ry="2" fill="#e8d5a0" stroke="#c89240" stroke-width="0.8" opacity="0.6"/>
+          <path d="M-7 1 Q-3 -6 0 -5 Q3 -6 7 1 Q3 2 0 1.5 Q-3 2 -7 1 Z" fill="#e8c070" stroke="#c89240" stroke-width="0.8"/>
+          <path d="M-5 0 Q-1 -3 3 -4" stroke="#c89240" stroke-width="0.5" fill="none" opacity="0.5"/>
+        </g>
+
+        <!-- small bowl of berries -->
+        <g transform="translate(143, 138)">
+          <ellipse cx="0" cy="4" rx="9" ry="2.5" fill="#d4a870" stroke="#c89240" stroke-width="0.8" opacity="0.5"/>
+          <path d="M-9 2 Q-9 -2 0 -2 Q9 -2 9 2 Z" fill="#e8d5a0" stroke="#c89240" stroke-width="0.8" opacity="0.6"/>
+          <circle cx="-3" cy="-1" r="2.5" fill="#cc3355" opacity="0.85"/>
+          <circle cx="1" cy="-2.5" r="2.5" fill="#7744aa" opacity="0.85"/>
+          <circle cx="4" cy="-0.5" r="2.5" fill="#cc3355" opacity="0.85"/>
+        </g>
+
+        <!-- juice glass -->
+        <g transform="translate(93, 131)">
+          <path d="M-3.5 0 L-4.5 13 L4.5 13 L3.5 0 Z" fill="#ff9933" opacity="0.45" stroke="#cc7722" stroke-width="0.8"/>
+          <ellipse cx="0" cy="0" rx="3.5" ry="1.3" fill="#ff9933" opacity="0.6"/>
+          <ellipse cx="0" cy="13" rx="4.5" ry="1.5" fill="#cc7722" opacity="0.3"/>
+        </g>
+
+        <!-- small jam jar -->
+        <g transform="translate(128, 132)">
+          <rect x="-4" y="0" width="8" height="10" fill="#ff5566" opacity="0.5" stroke="#cc3344" stroke-width="0.8" rx="1"/>
+          <rect x="-4" y="0" width="8" height="3" fill="#cc3344" opacity="0.4" rx="1"/>
+          <ellipse cx="0" cy="0" rx="4" ry="1.2" fill="#cc3344" opacity="0.5"/>
         </g>
       </svg>
     `,
@@ -123,36 +269,82 @@ const SCENES: AsciiScene[] = [
   {
     label: "at the cinema",
     svg: `
-      <svg width="100%" height="100%" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
-        <g stroke="#b5727a" stroke-linecap="round" stroke-linejoin="round" fill="none">
-          <rect x="6" y="6" width="108" height="62" rx="3" stroke-width="1.3"/>
-          <text x="60" y="26" font-size="6.5" fill="#b5727a" stroke="none" font-family="serif" text-anchor="middle" font-style="italic" letter-spacing="0.5">ONE BATTLE</text>
-          <text x="60" y="35" font-size="6.5" fill="#b5727a" stroke="none" font-family="serif" text-anchor="middle" font-style="italic" letter-spacing="0.5">AFTER ANOTHER</text>
-          <text x="14" y="28" font-size="5" fill="#b5727a" stroke="none" font-family="serif" opacity="0.6">★</text>
-          <text x="100" y="28" font-size="5" fill="#b5727a" stroke="none" font-family="serif" opacity="0.6">★</text>
-          <path d="M14 56 L28 38 L40 50 L54 30 L70 56" stroke-width="0.9" opacity="0.5"/>
-          <circle cx="88" cy="28" r="7" stroke-width="0.9" opacity="0.4"/>
-          <path d="M10 56 L110 56" stroke-width="0.7" opacity="0.3"/>
-          <line x1="10" y1="44" x2="110" y2="44" stroke-width="0.4" opacity="0.15"/>
-          <line x1="10" y1="50" x2="110" y2="50" stroke-width="0.4" opacity="0.15"/>
-          <circle cx="22" cy="96" r="7" stroke-width="1.2"/>
-          <path d="M16 91 Q13 86 15 84" stroke-width="1"/>
-          <path d="M28 91 Q32 86 30 84" stroke-width="1"/>
-          <path d="M16 102 L12 118" stroke-width="1.2"/>
-          <path d="M28 102 L32 118" stroke-width="1.2"/>
-          <circle cx="60" cy="93" r="8" stroke-width="1.2"/>
-          <path d="M52 89 Q46 84 46 94 Q46 106 50 118" stroke-width="1.2"/>
-          <path d="M68 89 Q74 84 74 94 Q74 106 70 118" stroke-width="1.2"/>
-          <path d="M52 101 L48 118" stroke-width="1.2"/>
-          <path d="M68 101 L72 118" stroke-width="1.2"/>
-          <circle cx="98" cy="96" r="7" stroke-width="1.2"/>
-          <path d="M92 91 Q89 86 91 84" stroke-width="1"/>
-          <path d="M104 91 Q107 86 105 84" stroke-width="1"/>
-          <path d="M92 102 L88 118" stroke-width="1.2"/>
-          <path d="M104 102 L108 118" stroke-width="1.2"/>
-          <path d="M54 105 L56 118 L64 118 L66 105 Z" stroke-width="1"/>
-          <path d="M53 105 Q60 102 67 105" stroke-width="0.8"/>
-          <path d="M4 122 L116 122" stroke-width="0.7" opacity="0.35"/>
+      <svg width="100%" height="100%" viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg">
+        <!-- movie screen -->
+        <rect x="20" y="15" width="200" height="90" fill="#2d2d38" stroke="#1a1a22" stroke-width="2" rx="3"/>
+        <text x="120" y="45" font-family="serif" font-size="10" fill="#c45a6b" text-anchor="middle" font-style="italic" letter-spacing="1">ONE BATTLE</text>
+        <text x="120" y="60" font-family="serif" font-size="10" fill="#c45a6b" text-anchor="middle" font-style="italic" letter-spacing="1">AFTER ANOTHER</text>
+        <text x="120" y="80" font-family="serif" font-size="7" fill="#8a6a7a" text-anchor="middle" opacity="0.7">sundown</text>
+
+        <!-- faint audience bg silhouettes -->
+        <g opacity="0.1" fill="#1a1a22">
+          <circle cx="38" cy="128" r="10"/>
+          <circle cx="202" cy="130" r="10"/>
+        </g>
+
+        <!-- friend left - PPG style -->
+        <g transform="translate(63, 168)">
+          <circle cx="-11" cy="-39" r="8" fill="#1a0d08" stroke="#0a0505" stroke-width="1.3"/>
+          <circle cx="11" cy="-39" r="8" fill="#1a0d08" stroke="#0a0505" stroke-width="1.3"/>
+          <circle cx="0" cy="-26" r="14" fill="#c49a7c" stroke="#1a0d08" stroke-width="2"/>
+          <!-- eyes shifted up: looking at screen -->
+          <ellipse cx="-5.5" cy="-27" rx="5" ry="6.5" fill="white" stroke="#1a0d08" stroke-width="1.2"/>
+          <ellipse cx="5.5" cy="-27" rx="5" ry="6.5" fill="white" stroke="#1a0d08" stroke-width="1.2"/>
+          <ellipse cx="-5.5" cy="-29" rx="4" ry="5.5" fill="#1a0d08"/>
+          <ellipse cx="5.5" cy="-29" rx="4" ry="5.5" fill="#1a0d08"/>
+          <circle cx="-3.5" cy="-31" r="1.4" fill="white" opacity="0.9"/>
+          <circle cx="7.5" cy="-31" r="1.4" fill="white" opacity="0.9"/>
+          <ellipse cx="0" cy="-18" rx="3" ry="2" fill="#8b3838" opacity="0.7"/>
+          <!-- trapezoid dress -->
+          <path d="M-8 -12 L-11 4 Q-11 8 -7 8 L7 8 Q11 8 11 4 L8 -12 Z" fill="#ff9922" stroke="#1a0d08" stroke-width="2"/>
+          <circle cx="-15" cy="-7" r="4.5" fill="#ff9922" stroke="#1a0d08" stroke-width="1.5"/>
+          <circle cx="15" cy="-7" r="4.5" fill="#ff9922" stroke="#1a0d08" stroke-width="1.5"/>
+        </g>
+
+        <!-- barbara - center, PPG style -->
+        <g transform="translate(120, 165)">
+          <circle cx="-15" cy="-53" r="11" fill="#2d1810" stroke="#1a0d08" stroke-width="1.8"/>
+          <circle cx="15" cy="-53" r="11" fill="#2d1810" stroke="#1a0d08" stroke-width="1.8"/>
+          <circle cx="0" cy="-58" r="12" fill="#2d1810" stroke="#1a0d08" stroke-width="1.8"/>
+          <circle cx="0" cy="-37" r="17" fill="#8b5a3c" stroke="#1a0d08" stroke-width="2.2"/>
+          <!-- eyes shifted up: looking at screen -->
+          <ellipse cx="-7" cy="-37" rx="6.5" ry="8" fill="white" stroke="#1a0d08" stroke-width="1.4"/>
+          <ellipse cx="7" cy="-37" rx="6.5" ry="8" fill="white" stroke="#1a0d08" stroke-width="1.4"/>
+          <ellipse cx="-7" cy="-40" rx="5" ry="6.5" fill="#1a0d08"/>
+          <ellipse cx="7" cy="-40" rx="5" ry="6.5" fill="#1a0d08"/>
+          <circle cx="-4.5" cy="-43" r="1.8" fill="white" opacity="0.9"/>
+          <circle cx="9.5" cy="-43" r="1.8" fill="white" opacity="0.9"/>
+          <ellipse cx="0" cy="-27" rx="3.5" ry="2.5" fill="#8b3838" opacity="0.7"/>
+          <!-- trapezoid dress -->
+          <path d="M-10 -19 L-14 6 Q-14 11 -9 11 L9 11 Q14 11 14 6 L10 -19 Z" fill="#ff3377" stroke="#1a0d08" stroke-width="2.2"/>
+          <circle cx="-18" cy="-10" r="5.5" fill="#ff3377" stroke="#1a0d08" stroke-width="1.8"/>
+          <circle cx="18" cy="-10" r="5.5" fill="#ff3377" stroke="#1a0d08" stroke-width="1.8"/>
+        </g>
+
+        <!-- friend right - PPG style -->
+        <g transform="translate(178, 168)">
+          <circle cx="-10" cy="-38" r="7.5" fill="#4a2f1a" stroke="#1a0d08" stroke-width="1.3"/>
+          <circle cx="10" cy="-38" r="7.5" fill="#4a2f1a" stroke="#1a0d08" stroke-width="1.3"/>
+          <circle cx="0" cy="-26" r="14" fill="#d4a574" stroke="#1a0d08" stroke-width="2"/>
+          <!-- eyes shifted up: looking at screen -->
+          <ellipse cx="-5.5" cy="-27" rx="5" ry="6.5" fill="white" stroke="#1a0d08" stroke-width="1.2"/>
+          <ellipse cx="5.5" cy="-27" rx="5" ry="6.5" fill="white" stroke="#1a0d08" stroke-width="1.2"/>
+          <ellipse cx="-5.5" cy="-29" rx="4" ry="5.5" fill="#1a0d08"/>
+          <ellipse cx="5.5" cy="-29" rx="4" ry="5.5" fill="#1a0d08"/>
+          <circle cx="-3.5" cy="-31" r="1.4" fill="white" opacity="0.9"/>
+          <circle cx="7.5" cy="-31" r="1.4" fill="white" opacity="0.9"/>
+          <ellipse cx="0" cy="-18" rx="3" ry="2" fill="#8b3838" opacity="0.7"/>
+          <path d="M-8 -12 L-11 4 Q-11 8 -7 8 L7 8 Q11 8 11 4 L8 -12 Z" fill="#4488ff" stroke="#1a0d08" stroke-width="2"/>
+          <circle cx="-15" cy="-7" r="4.5" fill="#4488ff" stroke="#1a0d08" stroke-width="1.5"/>
+          <circle cx="15" cy="-7" r="4.5" fill="#4488ff" stroke="#1a0d08" stroke-width="1.5"/>
+        </g>
+
+        <!-- popcorn bucket -->
+        <g transform="translate(107, 188)">
+          <path d="M-8 0 L-10 12 L10 12 L8 0 Z" fill="#e8d4a8" stroke="#c89240" stroke-width="1.2"/>
+          <circle cx="-4" cy="-2" r="2.5" fill="#f4e8c8"/>
+          <circle cx="0" cy="-4" r="3" fill="#f4e8c8"/>
+          <circle cx="4" cy="-2" r="2.5" fill="#f4e8c8"/>
         </g>
       </svg>
     `,
@@ -160,49 +352,55 @@ const SCENES: AsciiScene[] = [
   {
     label: "reading",
     svg: `
-      <svg width="100%" height="100%" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
-        <g stroke="#b5727a" stroke-linecap="round" stroke-linejoin="round" fill="none">
-          <circle cx="88" cy="16" r="1.8" stroke-width="1" opacity="0.5"/>
-          <circle cx="95" cy="10" r="2.5" stroke-width="1" opacity="0.4"/>
-          <circle cx="103" cy="6" r="3.5" stroke-width="1" opacity="0.3"/>
-          <path d="M20 78 L20 108 Q20 115 28 115 L92 115 Q100 115 100 108 L100 78" stroke-width="1.2" opacity="0.5"/>
-          <path d="M14 78 Q14 68 20 68 L20 98" stroke-width="1.2" opacity="0.5"/>
-          <path d="M106 78 Q106 68 100 68 L100 98" stroke-width="1.2" opacity="0.5"/>
-          <path d="M14 98 L106 98" stroke-width="1" opacity="0.4"/>
-          <circle cx="60" cy="50" r="11" stroke-width="1.2"/>
-          <path d="M49 44 Q38 34 35 46 Q32 58 38 70 Q42 80 44 92 Q46 102 47 115" stroke-width="1.4"/>
-          <path d="M71 44 Q82 34 85 46 Q88 58 82 70 Q78 80 76 92 Q74 102 73 115" stroke-width="1.4"/>
-          <path d="M50 40 Q48 26 60 24 Q72 26 70 40" stroke-width="1.3"/>
-          <path d="M36 48 Q28 62 30 80 Q32 94 36 108" stroke-width="1"/>
-          <path d="M84 48 Q92 62 90 80 Q88 94 84 108" stroke-width="1"/>
-          <path d="M44 100 Q46 106 44 112 Q42 118 44 124" stroke-width="0.9"/>
-          <path d="M76 100 Q74 106 76 112 Q78 118 76 124" stroke-width="0.9"/>
-          <path d="M51 40 Q54 37 57 40" stroke-width="1.2"/>
-          <circle cx="54" cy="38" r="1.5" stroke-width="1"/>
-          <path d="M50 37 Q52 34 54 36" stroke-width="0.8"/>
-          <path d="M58 37 Q56 34 54 36" stroke-width="0.8"/>
-          <circle cx="49" cy="54" r="1.5" stroke-width="1"/>
-          <line x1="49" y1="56" x2="49" y2="60" stroke-width="1"/>
-          <circle cx="49" cy="61" r="1.2" stroke-width="1"/>
-          <line x1="55" y1="50" x2="57" y2="50" stroke-width="1.3"/>
-          <line x1="62" y1="50" x2="64" y2="50" stroke-width="1.3"/>
-          <line x1="55" y1="50" x2="54" y2="48" stroke-width="0.8"/>
-          <line x1="56" y1="50" x2="55" y2="48" stroke-width="0.8"/>
-          <line x1="64" y1="50" x2="65" y2="48" stroke-width="0.8"/>
-          <line x1="63" y1="50" x2="64" y2="48" stroke-width="0.8"/>
-          <path d="M46 61 Q60 57 74 61 L76 88 Q60 93 44 88 Z" stroke-width="1.2"/>
-          <path d="M56 61 Q60 65 64 61" stroke-width="1"/>
-          <path d="M46 70 Q38 74 34 78" stroke-width="1.2"/>
-          <path d="M74 70 Q82 74 86 78" stroke-width="1.2"/>
-          <path d="M32 76 Q60 72 88 76 L88 94 Q60 90 32 94 Z" stroke-width="1.2"/>
-          <line x1="60" y1="72" x2="60" y2="94" stroke-width="0.8"/>
-          <line x1="36" y1="81" x2="56" y2="80" stroke-width="0.6" opacity="0.5"/>
-          <line x1="36" y1="85" x2="56" y2="84" stroke-width="0.6" opacity="0.5"/>
-          <line x1="36" y1="89" x2="56" y2="88" stroke-width="0.6" opacity="0.5"/>
-          <line x1="64" y1="80" x2="84" y2="81" stroke-width="0.6" opacity="0.5"/>
-          <line x1="64" y1="84" x2="84" y2="85" stroke-width="0.6" opacity="0.5"/>
-          <line x1="64" y1="88" x2="84" y2="89" stroke-width="0.6" opacity="0.5"/>
+      <svg width="100%" height="100%" viewBox="0 0 200 180" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <!-- thought bubbles -->
+        <g opacity="0.35" fill="none" stroke="#8a6a7a" stroke-width="1.2">
+          <circle cx="152" cy="28" r="10"/>
+          <circle cx="167" cy="18" r="6"/>
+          <circle cx="177" cy="11" r="3.5"/>
         </g>
+        <!-- armchair -->
+        <g opacity="0.2">
+          <rect x="40" y="118" width="120" height="45" fill="#8a6a7a" rx="5"/>
+          <rect x="35" y="108" width="15" height="65" fill="#8a6a7a" rx="3"/>
+          <rect x="150" y="108" width="15" height="65" fill="#8a6a7a" rx="3"/>
+        </g>
+
+        <!-- barbara reading - PPG style -->
+        <g transform="translate(100, 126)">
+          <!-- hair puffs -->
+          <circle cx="-16" cy="-56" r="12" fill="#2d1810" stroke="#1a0d08" stroke-width="2"/>
+          <circle cx="16" cy="-56" r="12" fill="#2d1810" stroke="#1a0d08" stroke-width="2"/>
+          <circle cx="0" cy="-62" r="13" fill="#2d1810" stroke="#1a0d08" stroke-width="2"/>
+          <!-- head -->
+          <circle cx="0" cy="-39" r="18" fill="#8b5a3c" stroke="#1a0d08" stroke-width="2.5"/>
+          <!-- PPG eyes - iris shifted down: looking at book -->
+          <ellipse cx="-7" cy="-39" rx="6.5" ry="8" fill="white" stroke="#1a0d08" stroke-width="1.5"/>
+          <ellipse cx="7" cy="-39" rx="6.5" ry="8" fill="white" stroke="#1a0d08" stroke-width="1.5"/>
+          <ellipse cx="-7" cy="-36" rx="5" ry="6.5" fill="#1a0d08"/>
+          <ellipse cx="7" cy="-36" rx="5" ry="6.5" fill="#1a0d08"/>
+          <circle cx="-5" cy="-37" r="1.5" fill="white" opacity="0.9"/>
+          <circle cx="9" cy="-37" r="1.5" fill="white" opacity="0.9"/>
+          <!-- content smile -->
+          <path d="M-4 -29 Q0 -26 4 -29" stroke="#8b3838" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <!-- trapezoid dress -->
+          <path d="M-10 -19 L-14 6 Q-14 11 -9 11 L9 11 Q14 11 14 6 L10 -19 Z" fill="#ff3377" stroke="#1a0d08" stroke-width="2.5"/>
+          <!-- stub arm circles holding book -->
+          <circle cx="-18" cy="-8" r="5.5" fill="#ff3377" stroke="#1a0d08" stroke-width="2"/>
+          <circle cx="18" cy="-8" r="5.5" fill="#ff3377" stroke="#1a0d08" stroke-width="2"/>
+          <!-- book -->
+          <rect x="-19" y="0" width="38" height="26" fill="#7a92b4" stroke="#1a0d08" stroke-width="2" rx="1"/>
+          <line x1="0" y1="0" x2="0" y2="26" stroke="#1a0d08" stroke-width="1.5"/>
+          <line x1="-14" y1="8" x2="-4" y2="8" stroke="#5a7294" stroke-width="0.8" opacity="0.6"/>
+          <line x1="-14" y1="13" x2="-4" y2="13" stroke="#5a7294" stroke-width="0.8" opacity="0.6"/>
+          <line x1="-14" y1="18" x2="-4" y2="18" stroke="#5a7294" stroke-width="0.8" opacity="0.6"/>
+          <line x1="4" y1="8" x2="14" y2="8" stroke="#5a7294" stroke-width="0.8" opacity="0.6"/>
+          <line x1="4" y1="13" x2="14" y2="13" stroke="#5a7294" stroke-width="0.8" opacity="0.6"/>
+          <line x1="4" y1="18" x2="14" y2="18" stroke="#5a7294" stroke-width="0.8" opacity="0.6"/>
+        </g>
+
+        <!-- floor shadow -->
+        <ellipse cx="100" cy="155" rx="42" ry="6" fill="#8a6a7a" opacity="0.15"/>
       </svg>
     `,
   },
