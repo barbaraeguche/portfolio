@@ -1,4 +1,4 @@
-import SCENES from "@/lib/thoughtScenes";
+import SCENES from "../lib/scenes";
 import { useEffect, useState } from "react";
 
 const ROTATE_SECONDS = 7;
@@ -22,7 +22,7 @@ const cloudPath =
   "C 178 328 132 316 120 290 " +
   "C 95 298 75 278 90 255 Z";
 
-export default function ThoughtBubble() {
+export default function CloudBubble() {
   const scenes = SCENES;
   const [idx, setIdx] = useState(0);
   
@@ -33,10 +33,10 @@ export default function ThoughtBubble() {
   
   return (
     <div className="relative pt-7.5">
-      <div className="relative w-full max-w-160 ml-auto">
+      <div className="relative w-full ml-auto">
         <svg
           className="w-full h-auto block"
-          viewBox="30 5 500 440"
+          viewBox="30 5 500 335"
           preserveAspectRatio="xMidYMid meet"
           aria-hidden="true"
         >
@@ -45,26 +45,14 @@ export default function ThoughtBubble() {
             <filter id="cloud-edge" x="-10%" y="-10%" width="120%" height="120%">
               <feGaussianBlur stdDeviation="4"/>
             </filter>
-            <filter id="bubble-edge" x="-30%" y="-30%" width="160%" height="160%">
-              <feGaussianBlur stdDeviation="2.5"/>
-            </filter>
-            
+
             {/* rim blur — used for the soft depth underlay */}
             <filter id="rim-blur" x="-12%" y="-12%" width="124%" height="124%">
               <feGaussianBlur stdDeviation="7"/>
             </filter>
-            
+
             <mask id="cloud-mask">
               <path d={cloudPath} fill="white" filter="url(#cloud-edge)"/>
-            </mask>
-            <mask id="bubble-1">
-              <circle cx="78" cy="355" r="19" fill="white" filter="url(#bubble-edge)"/>
-            </mask>
-            <mask id="bubble-2">
-              <circle cx="57" cy="398" r="12" fill="white" filter="url(#bubble-edge)"/>
-            </mask>
-            <mask id="bubble-3">
-              <circle cx="42" cy="430" r="7" fill="white" filter="url(#bubble-edge)"/>
             </mask>
             
             {/* main fill — bright center fading to warm cream at edges */}
@@ -81,49 +69,32 @@ export default function ThoughtBubble() {
             </radialGradient>
           </defs>
           
-          {/* thought trail — bubbles appear first, bottom-up */}
-          <g className="animate-bubble-in">
-            <circle cx="42" cy="430" r="7" fill="var(--color-rose-ink)" opacity="0.07" filter="url(#rim-blur)"/>
-            <circle cx="42" cy="430" r="7" fill="var(--color-rose-cloud)" mask="url(#bubble-3)"/>
-          </g>
-          <g className="animate-bubble-in [animation-delay:0.18s]">
-            <circle cx="57" cy="398" r="12" fill="var(--color-rose-ink)" opacity="0.07" filter="url(#rim-blur)"/>
-            <circle cx="57" cy="398" r="12" fill="var(--color-rose-cloud)" mask="url(#bubble-2)"/>
-          </g>
-          <g className="animate-bubble-in [animation-delay:0.36s]">
-            <circle cx="78" cy="355" r="19" fill="var(--color-rose-ink)" opacity="0.07" filter="url(#rim-blur)"/>
-            <circle cx="78" cy="355" r="19" fill="var(--color-rose-cloud)" mask="url(#bubble-1)"/>
-          </g>
-
-          {/* main cloud body — appears after the trail */}
-          <g className="animate-cloud-in [animation-delay:0.56s]">
+          <g className="animate-cloud-in [animation-delay:0.2s]">
             <path d={cloudPath} fill="var(--color-rose-ink)" opacity="0.07" filter="url(#rim-blur)"/>
             <rect x="30" y="5" width="500" height="440" fill="url(#cloudBody)" mask="url(#cloud-mask)"/>
             <rect x="30" y="5" width="500" height="440" fill="url(#cloudHighlight)" mask="url(#cloud-mask)"/>
           </g>
         </svg>
         
-        {/* svg scenes rendered as inline html over the cloud */}
-        <div className="absolute inset-[12%_16%_25%_10%] animate-fade-up [animation-delay:1.1s]">
-          {scenes.map((s, i) => (
-            <div
-              key={i}
-              className={`scene-frame absolute inset-0 ${i === idx ? "is-active" : ""}`}
-            >
-              <div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[75%]"
-                dangerouslySetInnerHTML={{ __html: s.svg }}
-              />
-            </div>
-          ))}
+        {/* image scenes rendered over the cloud */}
+        <div className="absolute inset-[12%_16%_8%_10%] animate-fade-up [animation-delay:0.7s]">
+          {/*{scenes.map((s, i) => (*/}
+          {/*  <div key={i} className={`scene-frame absolute inset-0 ${i === idx ? "is-active" : ""}`}>*/}
+          {/*    <img*/}
+          {/*      src={s.image}*/}
+          {/*      alt={s.label}*/}
+          {/*      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[75%] object-contain"*/}
+          {/*    />*/}
+          {/*  </div>*/}
+          {/*))}*/}
         </div>
       </div>
       
-      <div className="text-center font-mono text-[11px] tracking-[0.18em] uppercase text-rose-ink-soft animate-fade-up [animation-delay:1.2s]">
+      <div className="mt-8 text-center font-mono text-[11px] tracking-[0.18em] uppercase text-rose-ink-soft animate-fade-up [animation-delay:0.8s]">
         — {scenes[idx]?.label} —
       </div>
 
-      <div className="flex gap-1.5 justify-center mt-7 animate-fade-up [animation-delay:1.3s]">
+      <div className="flex gap-1.5 justify-center mt-7 animate-fade-up [animation-delay:0.9s]">
         {scenes.map((_, i) => (
           <button
             key={i}
