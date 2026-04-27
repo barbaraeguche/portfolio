@@ -1,5 +1,5 @@
 import SectionHeader from "@/components/sectionHeader";
-import ThoughtBubble from "@/components/thoughtBubble";
+import CloudBubble from "@/components/cloudBubble";
 import { socials } from "@/lib/data";
 import { type ReactNode } from "react";
 
@@ -32,12 +32,13 @@ export default function About() {
             a little more on me
           </span>
           <p className="animate-fade-up [animation-delay:0.54s]">
-            i worked on code coverage analysis at autodesk and built frontend interfaces at radio-ip. outside of that,
-            i'm drawn to infra, databases, and their intersection with finance, with hardware further down the road.
+            i worked on code coverage analysis on 3d animation software (3ds max & maya) at autodesk, and built
+            interfaces for mobile vpn (mult-ip) at radio-ip. i'm drawn to infra, databases, and finance, with a
+            persistent curiosity on hardware.
           </p>
           <p className="mt-4 animate-fade-up [animation-delay:0.66s]">
-            when i'm not coding, i'm learning to skate, going out for brunch or picnic dates, reading romance novels,
-            brushing up on my french, and slowly getting into knitting.
+            my hobbies include learning to skate, brunch/picnic dates, reading (mostly romance), and watching movies
+            (although i prefer series). i'm slowly getting into knitting and so much more...
           </p>
         </div>
 
@@ -73,7 +74,7 @@ export default function About() {
           </DlRow>
         </dl>
       </div>
-      <ThoughtBubble/>
+      <CloudBubble/>
     </section>
   );
 }
