@@ -48,6 +48,13 @@ html, body, #root {
   min-height: 100vh;
 }
 
+html {
+  background-color: var(--color-rose-bg);
+  background-image: radial-gradient(ellipse at 50% 30%, transparent 40%, #5a2a2614 100%);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 * {
   cursor: none !important;
 }
