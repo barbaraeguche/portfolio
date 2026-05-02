@@ -1,4 +1,4 @@
-import { routes } from "@/routes";
+import { routes } from "@/lib/routes";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import React, { useState } from "react";
 

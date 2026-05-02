@@ -1,11 +1,11 @@
-import Closing from "@/components/closing";
-import Footer from "@/components/footer";
-import Header from "@/components/header";
+import Closing from "@/sections/closing";
+import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/header";
 import { type ReactNode } from "react";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    // page root — sets palette base colors and font for all pages
+    // page root — sets palette base colors and font for all sections
     <div className="min-h-screen relative overflow-x-hidden bg-rose-bg text-rose-ink font-body">
       {/* paper grain overlay */}
       <div aria-hidden="true" className="fixed inset-0 pointer-events-none z-1 bg-noise opacity-55 mix-blend-multiply"/>
