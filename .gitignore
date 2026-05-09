@@ -28,4 +28,4 @@ lerna-debug.log*
 *.local
 
 # personal
-src/manifesting.ts
+src/manifesting.json
