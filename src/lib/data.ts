@@ -6,8 +6,8 @@ export const experience: IExperience[] = [
     url: "https://www.bloomberg.com/company/",
     roles: [{
       title: "Software Engineer",
-      team: "xx | xx",
-      period: "Incoming Summer '26",
+      team: "eng build client & ci | visualizing ingestion dependencies",
+      period: "Jun 2026 - Aug 2026",
       is_internship: true,
       is_current: true,
     }],
