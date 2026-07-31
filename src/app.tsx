@@ -3,7 +3,6 @@ import Layout from "@/components/layout";
 import About from "@/sections/about";
 import Experience from "@/sections/experience";
 import Projects from "@/sections/projects";
-import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   return (
@@ -14,7 +13,6 @@ export default function App() {
         <Experience/>
         <Projects/>
       </Layout>
-      <Analytics/>
     </>
   );
 }
